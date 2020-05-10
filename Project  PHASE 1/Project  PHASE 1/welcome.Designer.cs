@@ -59,6 +59,7 @@
             // 
             // ExitBtn
             // 
+            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitBtn.Location = new System.Drawing.Point(-1, 709);
             this.ExitBtn.Name = "ExitBtn";
@@ -78,13 +79,14 @@
             this.BtnPanel.Controls.Add(this.RemoveBtn);
             this.BtnPanel.Location = new System.Drawing.Point(0, 189);
             this.BtnPanel.Name = "BtnPanel";
-            this.BtnPanel.Size = new System.Drawing.Size(291, 258);
+            this.BtnPanel.Size = new System.Drawing.Size(291, 250);
             this.BtnPanel.TabIndex = 3;
             // 
             // LogoutBtn
             // 
+            this.LogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutBtn.Location = new System.Drawing.Point(-3, 194);
+            this.LogoutBtn.Location = new System.Drawing.Point(0, 210);
             this.LogoutBtn.Name = "LogoutBtn";
             this.LogoutBtn.Size = new System.Drawing.Size(291, 42);
             this.LogoutBtn.TabIndex = 6;
@@ -94,8 +96,9 @@
             // 
             // AddBtn
             // 
+            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBtn.Location = new System.Drawing.Point(-3, 0);
+            this.AddBtn.Location = new System.Drawing.Point(0, 0);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(291, 42);
             this.AddBtn.TabIndex = 5;
@@ -104,8 +107,9 @@
             // 
             // addNewUserBtn
             // 
+            this.addNewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewUserBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewUserBtn.Location = new System.Drawing.Point(-3, 156);
+            this.addNewUserBtn.Location = new System.Drawing.Point(0, 168);
             this.addNewUserBtn.Name = "addNewUserBtn";
             this.addNewUserBtn.Size = new System.Drawing.Size(291, 42);
             this.addNewUserBtn.TabIndex = 4;
@@ -114,8 +118,9 @@
             // 
             // CngPsdBtn
             // 
+            this.CngPsdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CngPsdBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CngPsdBtn.Location = new System.Drawing.Point(-1, 115);
+            this.CngPsdBtn.Location = new System.Drawing.Point(0, 126);
             this.CngPsdBtn.Name = "CngPsdBtn";
             this.CngPsdBtn.Size = new System.Drawing.Size(291, 42);
             this.CngPsdBtn.TabIndex = 3;
@@ -125,18 +130,21 @@
             // RetBtn
             // 
             this.RetBtn.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.RetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RetBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetBtn.Location = new System.Drawing.Point(-1, 77);
+            this.RetBtn.Location = new System.Drawing.Point(0, 84);
             this.RetBtn.Name = "RetBtn";
             this.RetBtn.Size = new System.Drawing.Size(291, 42);
             this.RetBtn.TabIndex = 2;
             this.RetBtn.Text = "Return Book";
             this.RetBtn.UseVisualStyleBackColor = true;
+            this.RetBtn.Click += new System.EventHandler(this.RetBtn_Click);
             // 
             // RemoveBtn
             // 
+            this.RemoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveBtn.Location = new System.Drawing.Point(-1, 39);
+            this.RemoveBtn.Location = new System.Drawing.Point(0, 41);
             this.RemoveBtn.Name = "RemoveBtn";
             this.RemoveBtn.Size = new System.Drawing.Size(291, 42);
             this.RemoveBtn.TabIndex = 1;

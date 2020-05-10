@@ -72,6 +72,7 @@ namespace Project__PHASE_1
                 this.ForeColor, loginPanel.BackColor, loginPanel.ForeColor);
             this.Hide();
             WelForm.Show();
+
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)

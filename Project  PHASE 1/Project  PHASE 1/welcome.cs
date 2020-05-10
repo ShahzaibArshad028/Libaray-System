@@ -26,17 +26,33 @@ namespace Project__PHASE_1
             leftPanel.BackColor = PanelBack;
             leftPanel.ForeColor = PanelFore;
             BtnPanel.ForeColor = ForeColor;
-           // BtnPanel.BackColor = BackColor;
+           
+            // BtnPanel.BackColor = BackGround;
 
             if (leftPanel.BackColor == Color.FromArgb(220, 220, 220))
             {
-                
-                imgPanel.BackColor = Color.FromArgb(190, 190, 190);
+                Color LIGHT = Color.FromArgb(190, 190, 190);
+                imgPanel.BackColor = LIGHT;
+                AddBtn.BackColor = leftPanel.BackColor;
+                RemoveBtn.BackColor = leftPanel.BackColor;
+                RetBtn.BackColor = leftPanel.BackColor;
+                CngPsdBtn.BackColor = leftPanel.BackColor;
+                addNewUserBtn.BackColor = leftPanel.BackColor;
+                LogoutBtn.BackColor = leftPanel.BackColor;
+                ExitBtn.BackColor = leftPanel.BackColor;
+
             }
             else
             {
-           
-                imgPanel.BackColor = Color.FromArgb(70, 70, 105);
+                Color DARK = Color.FromArgb(70, 70, 105);
+                AddBtn.BackColor = DARK;
+                RemoveBtn.BackColor = DARK;
+                RetBtn.BackColor = DARK;
+                CngPsdBtn.BackColor = DARK;
+                addNewUserBtn.BackColor = DARK;
+                LogoutBtn.BackColor = DARK;
+                ExitBtn.BackColor = DARK;
+                imgPanel.BackColor = DARK;
             }
         }
         private void welcome_Load(object sender, EventArgs e)
@@ -55,6 +71,11 @@ namespace Project__PHASE_1
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void RetBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
