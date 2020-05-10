@@ -16,5 +16,10 @@ namespace Project__PHASE_1
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
