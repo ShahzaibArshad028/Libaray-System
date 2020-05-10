@@ -58,7 +58,8 @@ namespace Project__PHASE_1
 
         private void StartedButton_Click(object sender, EventArgs e)
         {
-            login Form4Loign=new login(this.BackColor, this.ForeColor);
+            login Form4Loign=new login(this.BackColor, 
+                this.ForeColor,panel2.BackColor,panel2.ForeColor);
             this.Hide();
             Form4Loign.ShowDialog();
          
@@ -70,6 +71,16 @@ namespace Project__PHASE_1
         }
 
         private void logo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

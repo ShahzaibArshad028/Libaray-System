@@ -17,14 +17,22 @@ namespace Project__PHASE_1
             InitializeComponent();
         }
 
-        public login(Color BackGround,Color ForeGround)
+        public login(Color BackGround,Color ForeGround,Color PanelBack,Color PanelFore)
         {
             InitializeComponent();
             BackColor = BackGround;
             ForeColor = ForeGround;
+            loginPanel.BackColor=PanelBack;
+            loginPanel.ForeColor=PanelFore;
+
         }
 
         private void login_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void titleLogin_Click(object sender, EventArgs e)
         {
 
         }
