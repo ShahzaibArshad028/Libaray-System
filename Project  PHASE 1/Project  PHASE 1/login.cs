@@ -55,7 +55,8 @@ namespace Project__PHASE_1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ThemeForm TForm = new ThemeForm();
+            ThemeForm TForm = new ThemeForm(this.BackColor,
+                this.ForeColor);
             this.Hide();
             TForm.Show();
         }
@@ -71,6 +72,11 @@ namespace Project__PHASE_1
                 this.ForeColor, loginPanel.BackColor, loginPanel.ForeColor);
             this.Hide();
             WelForm.Show();
+        }
+
+        private void ExitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

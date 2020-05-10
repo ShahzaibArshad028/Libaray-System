@@ -16,6 +16,12 @@ namespace Project__PHASE_1
         {
             InitializeComponent();
         }
+        public ThemeForm(Color Back, Color Fore)
+        {
+            InitializeComponent();
+            this.BackColor = Back;
+            this.ForeColor = Fore;
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {

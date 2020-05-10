@@ -32,17 +32,18 @@
             this.titleLogin = new System.Windows.Forms.Label();
             this.loginPanel = new System.Windows.Forms.Panel();
             this.myLoginPanel = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.loginBtn = new System.Windows.Forms.Button();
             this.psdText = new System.Windows.Forms.TextBox();
             this.userText = new System.Windows.Forms.TextBox();
             this.psdLabel = new System.Windows.Forms.Label();
             this.userlabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ExitBtn = new System.Windows.Forms.Button();
             this.loginPanel.SuspendLayout();
             this.myLoginPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // titleLogin
@@ -63,12 +64,13 @@
             this.loginPanel.Font = new System.Drawing.Font("Raleway Light", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginPanel.Location = new System.Drawing.Point(409, 106);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(466, 495);
+            this.loginPanel.Size = new System.Drawing.Size(466, 528);
             this.loginPanel.TabIndex = 1;
             this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginPanel_Paint);
             // 
             // myLoginPanel
             // 
+            this.myLoginPanel.Controls.Add(this.ExitBtn);
             this.myLoginPanel.Controls.Add(this.pictureBox2);
             this.myLoginPanel.Controls.Add(this.loginBtn);
             this.myLoginPanel.Controls.Add(this.psdText);
@@ -78,16 +80,26 @@
             this.myLoginPanel.Controls.Add(this.titleLogin);
             this.myLoginPanel.Location = new System.Drawing.Point(52, 35);
             this.myLoginPanel.Name = "myLoginPanel";
-            this.myLoginPanel.Size = new System.Drawing.Size(371, 422);
+            this.myLoginPanel.Size = new System.Drawing.Size(371, 466);
             this.myLoginPanel.TabIndex = 8;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(85, 15);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(181, 88);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // loginBtn
             // 
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.loginBtn.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.Location = new System.Drawing.Point(136, 348);
+            this.loginBtn.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginBtn.Location = new System.Drawing.Point(119, 348);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(101, 38);
+            this.loginBtn.Size = new System.Drawing.Size(134, 38);
             this.loginBtn.TabIndex = 7;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
@@ -143,15 +155,19 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
+            // ExitBtn
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(85, 15);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(181, 88);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.ExitBtn.BackColor = System.Drawing.Color.Maroon;
+            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitBtn.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ExitBtn.Location = new System.Drawing.Point(119, 401);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(134, 38);
+            this.ExitBtn.TabIndex = 9;
+            this.ExitBtn.Text = "Exit";
+            this.ExitBtn.UseVisualStyleBackColor = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
             // login
             // 
@@ -160,15 +176,18 @@
             this.ClientSize = new System.Drawing.Size(1284, 749);
             this.Controls.Add(this.loginPanel);
             this.Font = new System.Drawing.Font("Raleway", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.login_Load);
             this.loginPanel.ResumeLayout(false);
             this.myLoginPanel.ResumeLayout(false);
             this.myLoginPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,5 +204,6 @@
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Panel myLoginPanel;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button ExitBtn;
     }
 }
