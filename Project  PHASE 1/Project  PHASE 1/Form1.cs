@@ -38,5 +38,22 @@ namespace Project__PHASE_1
             ForeColor = Color.FromArgb(28, 28, 33);
             BackColor = Color.FromArgb(240, 240, 240);
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+            if (ThemeDark.Checked == true)
+            {
+                panel2.BackColor = Color.FromArgb(50, 50, 66);
+            }
+            else
+            {
+                panel2.BackColor = Color.FromArgb(220, 220, 220);
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
