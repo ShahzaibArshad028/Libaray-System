@@ -9,3 +9,4 @@ C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project  PHASE 1.pdb
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.login.resources
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.ThemeForm.resources
+C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.welcome.resources

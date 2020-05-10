@@ -31,16 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ThemeForm));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.themeLight = new System.Windows.Forms.RadioButton();
-            this.ThemeDark = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
+            this.ThemeDark = new System.Windows.Forms.RadioButton();
+            this.themeLight = new System.Windows.Forms.RadioButton();
             this.StartedButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,18 +68,16 @@
             this.panel1.Size = new System.Drawing.Size(315, 186);
             this.panel1.TabIndex = 3;
             // 
-            // themeLight
+            // label2
             // 
-            this.themeLight.AutoSize = true;
-            this.themeLight.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.themeLight.Location = new System.Drawing.Point(77, 88);
-            this.themeLight.Name = "themeLight";
-            this.themeLight.Size = new System.Drawing.Size(128, 26);
-            this.themeLight.TabIndex = 1;
-            this.themeLight.TabStop = true;
-            this.themeLight.Text = "Light Mode";
-            this.themeLight.UseVisualStyleBackColor = true;
-            this.themeLight.CheckedChanged += new System.EventHandler(this.themeLight_CheckedChanged);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Raleway", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(107, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 29);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Theme ";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ThemeDark
             // 
@@ -95,16 +92,18 @@
             this.ThemeDark.UseVisualStyleBackColor = true;
             this.ThemeDark.CheckedChanged += new System.EventHandler(this.ThemeDark_CheckedChanged);
             // 
-            // label2
+            // themeLight
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Raleway", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 29);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Theme ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.themeLight.AutoSize = true;
+            this.themeLight.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.themeLight.Location = new System.Drawing.Point(77, 88);
+            this.themeLight.Name = "themeLight";
+            this.themeLight.Size = new System.Drawing.Size(128, 26);
+            this.themeLight.TabIndex = 1;
+            this.themeLight.TabStop = true;
+            this.themeLight.Text = "Light Mode";
+            this.themeLight.UseVisualStyleBackColor = true;
+            this.themeLight.CheckedChanged += new System.EventHandler(this.themeLight_CheckedChanged);
             // 
             // StartedButton
             // 
@@ -210,7 +209,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
