@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Project__PHASE_1
 {
-    public partial class Form1 : Form
+    public partial class ThemeForm : Form
     {
-        public Form1()
+        public ThemeForm()
         {
             InitializeComponent();
         }
@@ -52,6 +52,24 @@ namespace Project__PHASE_1
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StartedButton_Click(object sender, EventArgs e)
+        {
+            login Form4Loign=new login(this.BackColor, this.ForeColor);
+            this.Hide();
+            Form4Loign.ShowDialog();
+         
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logo_Click(object sender, EventArgs e)
         {
 
         }

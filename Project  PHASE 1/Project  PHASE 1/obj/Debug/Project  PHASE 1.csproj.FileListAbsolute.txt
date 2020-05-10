@@ -3,8 +3,9 @@ C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\bin\Debug\Project  PHASE 1.exe
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\bin\Debug\Project  PHASE 1.pdb
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project  PHASE 1.csprojResolveAssemblyReference.cache
-C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.Form1.resources
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.Properties.Resources.resources
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project  PHASE 1.csproj.GenerateResource.Cache
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project  PHASE 1.exe
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project  PHASE 1.pdb
+C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.login.resources
+C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.ThemeForm.resources
