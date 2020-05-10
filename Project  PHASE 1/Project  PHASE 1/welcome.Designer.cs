@@ -41,6 +41,7 @@
             this.imgPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rightPanel = new System.Windows.Forms.Panel();
+            this.Searchbtn = new System.Windows.Forms.Button();
             this.leftPanel.SuspendLayout();
             this.BtnPanel.SuspendLayout();
             this.imgPanel.SuspendLayout();
@@ -61,7 +62,7 @@
             // 
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitBtn.Location = new System.Drawing.Point(-1, 709);
+            this.ExitBtn.Location = new System.Drawing.Point(0, 709);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(291, 42);
             this.ExitBtn.TabIndex = 7;
@@ -71,6 +72,7 @@
             // 
             // BtnPanel
             // 
+            this.BtnPanel.Controls.Add(this.Searchbtn);
             this.BtnPanel.Controls.Add(this.LogoutBtn);
             this.BtnPanel.Controls.Add(this.AddBtn);
             this.BtnPanel.Controls.Add(this.addNewUserBtn);
@@ -79,14 +81,14 @@
             this.BtnPanel.Controls.Add(this.RemoveBtn);
             this.BtnPanel.Location = new System.Drawing.Point(0, 189);
             this.BtnPanel.Name = "BtnPanel";
-            this.BtnPanel.Size = new System.Drawing.Size(291, 250);
+            this.BtnPanel.Size = new System.Drawing.Size(291, 293);
             this.BtnPanel.TabIndex = 3;
             // 
             // LogoutBtn
             // 
             this.LogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutBtn.Location = new System.Drawing.Point(0, 210);
+            this.LogoutBtn.Location = new System.Drawing.Point(0, 252);
             this.LogoutBtn.Name = "LogoutBtn";
             this.LogoutBtn.Size = new System.Drawing.Size(291, 42);
             this.LogoutBtn.TabIndex = 6;
@@ -109,7 +111,7 @@
             // 
             this.addNewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewUserBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewUserBtn.Location = new System.Drawing.Point(0, 168);
+            this.addNewUserBtn.Location = new System.Drawing.Point(0, 210);
             this.addNewUserBtn.Name = "addNewUserBtn";
             this.addNewUserBtn.Size = new System.Drawing.Size(291, 42);
             this.addNewUserBtn.TabIndex = 4;
@@ -120,7 +122,7 @@
             // 
             this.CngPsdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CngPsdBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CngPsdBtn.Location = new System.Drawing.Point(0, 126);
+            this.CngPsdBtn.Location = new System.Drawing.Point(0, 168);
             this.CngPsdBtn.Name = "CngPsdBtn";
             this.CngPsdBtn.Size = new System.Drawing.Size(291, 42);
             this.CngPsdBtn.TabIndex = 3;
@@ -132,7 +134,7 @@
             this.RetBtn.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.RetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RetBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetBtn.Location = new System.Drawing.Point(0, 84);
+            this.RetBtn.Location = new System.Drawing.Point(0, 126);
             this.RetBtn.Name = "RetBtn";
             this.RetBtn.Size = new System.Drawing.Size(291, 42);
             this.RetBtn.TabIndex = 2;
@@ -144,7 +146,7 @@
             // 
             this.RemoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RemoveBtn.Location = new System.Drawing.Point(0, 41);
+            this.RemoveBtn.Location = new System.Drawing.Point(0, 42);
             this.RemoveBtn.Name = "RemoveBtn";
             this.RemoveBtn.Size = new System.Drawing.Size(291, 42);
             this.RemoveBtn.TabIndex = 1;
@@ -177,6 +179,17 @@
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(993, 747);
             this.rightPanel.TabIndex = 1;
+            // 
+            // Searchbtn
+            // 
+            this.Searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Searchbtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Searchbtn.Location = new System.Drawing.Point(0, 84);
+            this.Searchbtn.Name = "Searchbtn";
+            this.Searchbtn.Size = new System.Drawing.Size(291, 42);
+            this.Searchbtn.TabIndex = 7;
+            this.Searchbtn.Text = "Search Book";
+            this.Searchbtn.UseVisualStyleBackColor = true;
             // 
             // welcome
             // 
@@ -214,5 +227,6 @@
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Button LogoutBtn;
+        private System.Windows.Forms.Button Searchbtn;
     }
 }
