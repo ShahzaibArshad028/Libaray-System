@@ -32,6 +32,7 @@
             this.leftPanel = new System.Windows.Forms.Panel();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.BtnPanel = new System.Windows.Forms.Panel();
+            this.SearchBtn = new System.Windows.Forms.Button();
             this.LogoutBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
             this.addNewUserBtn = new System.Windows.Forms.Button();
@@ -41,11 +42,15 @@
             this.imgPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rightPanel = new System.Windows.Forms.Panel();
-            this.SearchBtn = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.leftPanel.SuspendLayout();
             this.BtnPanel.SuspendLayout();
             this.imgPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.rightPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // leftPanel
@@ -84,6 +89,19 @@
             this.BtnPanel.Name = "BtnPanel";
             this.BtnPanel.Size = new System.Drawing.Size(275, 296);
             this.BtnPanel.TabIndex = 3;
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SearchBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBtn.Location = new System.Drawing.Point(0, 84);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(278, 42);
+            this.SearchBtn.TabIndex = 7;
+            this.SearchBtn.Text = "Search Book";
+            this.SearchBtn.UseVisualStyleBackColor = true;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // LogoutBtn
             // 
@@ -187,24 +205,44 @@
             // 
             // rightPanel
             // 
+            this.rightPanel.Controls.Add(this.label2);
+            this.rightPanel.Controls.Add(this.label1);
+            this.rightPanel.Controls.Add(this.pictureBox2);
             this.rightPanel.Font = new System.Drawing.Font("Raleway", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rightPanel.Location = new System.Drawing.Point(274, 2);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Size = new System.Drawing.Size(1008, 747);
             this.rightPanel.TabIndex = 1;
             // 
-            // SearchBtn
+            // pictureBox2
             // 
-            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SearchBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBtn.Location = new System.Drawing.Point(0, 84);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(278, 42);
-            this.SearchBtn.TabIndex = 7;
-            this.SearchBtn.Text = "Search Book";
-            this.SearchBtn.UseVisualStyleBackColor = true;
-            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(283, 124);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(490, 392);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Raleway", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(391, 534);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(300, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Welcome to Library Portal";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Raleway Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(382, 563);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(315, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "FInding Words for What We Already Know";
             // 
             // welcome
             // 
@@ -224,6 +262,9 @@
             this.BtnPanel.ResumeLayout(false);
             this.imgPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.rightPanel.ResumeLayout(false);
+            this.rightPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -243,5 +284,8 @@
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Button LogoutBtn;
         private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -20,11 +20,15 @@ namespace Project__PHASE_1
         public login(Color BackGround,Color ForeGround,Color PanelBack,Color PanelFore)
         {
             InitializeComponent();
-            BackColor = BackGround;
-            ForeColor = ForeGround;
+            this.BackColor = BackGround;
+            this.ForeColor = ForeGround;
             loginPanel.BackColor=PanelBack;
             loginPanel.ForeColor=PanelFore;
-           
+            if (this.BackColor == Color.FromArgb(28, 28, 33))
+            {
+                ExitBtn.BackColor = Color.FromArgb(50, 50, 66);
+                ExitBtn.ForeColor = Color.FromArgb(255, 255, 255);
+            }
 
         }
 
@@ -76,7 +80,8 @@ namespace Project__PHASE_1
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)
-        {
+        { 
+
             Application.Exit();
         }
     }

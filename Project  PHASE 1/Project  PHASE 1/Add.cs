@@ -17,6 +17,21 @@ namespace Project__PHASE_1
             InitializeComponent();
         }
 
+        public Add(Color BackGround, Color ForeGround, Color PanelBack, Color PanelFore)
+        {
+            InitializeComponent();
+            this.BackColor = BackGround;
+            this.ForeColor = ForeGround;
+            AddPanel.BackColor = PanelBack;
+            AddPanel.ForeColor = PanelFore;
+            //if (this.BackColor == Color.FromArgb(28, 28, 33))
+            //{
+            //    AddBtn.BackColor = Color.FromArgb(50, 50, 66);
+            //    AddBtn.ForeColor = Color.FromArgb(255, 255, 255);
+            //}
+
+        }
+
         private void label2_Click(object sender, EventArgs e)
         {
 
