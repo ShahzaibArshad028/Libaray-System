@@ -16,5 +16,15 @@ namespace Project__PHASE_1
         {
             InitializeComponent();
         }
+
+        private void AuthorNametxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

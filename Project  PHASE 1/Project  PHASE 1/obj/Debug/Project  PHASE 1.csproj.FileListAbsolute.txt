@@ -10,3 +10,10 @@ C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.login.resources
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.ThemeForm.resources
 C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.welcome.resources
+C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.Add.resources
+C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.ChangePassword.resources
+C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.AddForm.resources
+C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.NewUser.resources
+C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.Remove.resources
+C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.Return.resources
+C:\Users\shahz\OneDrive\Documents\GitHub\Libaray-System\Project  PHASE 1\Project  PHASE 1\obj\Debug\Project__PHASE_1.Search.resources

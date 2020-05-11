@@ -20,31 +20,27 @@ namespace Project__PHASE_1
         public welcome(Color BackGround, Color ForeGround, Color PanelBack, Color PanelFore)
         {
             InitializeComponent();
-            BackColor = BackGround;
-            ForeColor = ForeGround;
+            this.BackColor = BackGround;
+            this.ForeColor = ForeGround;
           
-            leftPanel.BackColor = PanelBack;
-            leftPanel.ForeColor = PanelFore;
-            BtnPanel.ForeColor = ForeColor;
-           
-            // BtnPanel.BackColor = BackGround;
-
-            if (leftPanel.BackColor == Color.FromArgb(220, 220, 220))
+            if (PanelBack == Color.FromArgb(220, 220, 220))
             {
-                Color LIGHT = Color.FromArgb(190, 190, 190);
+                Color LIGHT = PanelBack;
                 imgPanel.BackColor = LIGHT;
-                AddBtn.BackColor = leftPanel.BackColor;
-                RemoveBtn.BackColor = leftPanel.BackColor;
-                RetBtn.BackColor = leftPanel.BackColor;
-                CngPsdBtn.BackColor = leftPanel.BackColor;
-                addNewUserBtn.BackColor = leftPanel.BackColor;
-                LogoutBtn.BackColor = leftPanel.BackColor;
-                ExitBtn.BackColor = leftPanel.BackColor;
+                AddBtn.BackColor = LIGHT;
+                RemoveBtn.BackColor = LIGHT;
+                RetBtn.BackColor = LIGHT;
+                CngPsdBtn.BackColor = LIGHT;
+                addNewUserBtn.BackColor = LIGHT;
+                LogoutBtn.BackColor = LIGHT;
+                ExitBtn.BackColor = LIGHT;
+                SearchBtn.BackColor = LIGHT;
+                leftPanel.BackColor = Color.FromArgb(190, 190, 190);
 
             }
             else
             {
-                Color DARK = Color.FromArgb(70, 70, 105);
+                Color DARK = PanelBack;
                 AddBtn.BackColor = DARK;
                 RemoveBtn.BackColor = DARK;
                 RetBtn.BackColor = DARK;
@@ -53,6 +49,8 @@ namespace Project__PHASE_1
                 LogoutBtn.BackColor = DARK;
                 ExitBtn.BackColor = DARK;
                 imgPanel.BackColor = DARK;
+                SearchBtn.BackColor = DARK;
+                leftPanel.BackColor = Color.FromArgb(70,70,105);
             }
         }
         private void welcome_Load(object sender, EventArgs e)
@@ -75,7 +73,48 @@ namespace Project__PHASE_1
 
         private void RetBtn_Click(object sender, EventArgs e)
         {
+            Return returnForm = new Return();
+            returnForm.Show();
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void imgPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            Add addForm = new Add();
+            addForm.Show();
+        }
+
+        private void RemoveBtn_Click(object sender, EventArgs e)
+        {
+            Remove removeForm = new Remove();
+            removeForm.Show();  
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+            Search searchForm = new Search();
+            searchForm.Show();
+        }
+
+        private void CngPsdBtn_Click(object sender, EventArgs e)
+        {
+            ChangePassword changePasswordForm = new ChangePassword();
+            changePasswordForm.Show();
+        }
+
+        private void addNewUserBtn_Click(object sender, EventArgs e)
+        {
+            NewUser addNewUser = new NewUser();
+            addNewUser.Show();
         }
     }
 }

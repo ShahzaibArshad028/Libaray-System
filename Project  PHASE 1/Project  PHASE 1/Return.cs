@@ -16,5 +16,10 @@ namespace Project__PHASE_1
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
