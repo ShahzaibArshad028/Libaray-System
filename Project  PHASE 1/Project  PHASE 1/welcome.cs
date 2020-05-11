@@ -74,7 +74,7 @@ namespace Project__PHASE_1
         private void RetBtn_Click(object sender, EventArgs e)
         {
             Return returnForm = new Return();
-            returnForm.Show();
+            returnForm.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -90,31 +90,31 @@ namespace Project__PHASE_1
         private void AddBtn_Click(object sender, EventArgs e)
         {
             Add addForm = new Add();
-            addForm.Show();
+            addForm.ShowDialog();
         }
 
         private void RemoveBtn_Click(object sender, EventArgs e)
         {
             Remove removeForm = new Remove();
-            removeForm.Show();  
+            removeForm.ShowDialog();  
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
             Search searchForm = new Search();
-            searchForm.Show();
+            searchForm.ShowDialog();
         }
 
         private void CngPsdBtn_Click(object sender, EventArgs e)
         {
             ChangePassword changePasswordForm = new ChangePassword();
-            changePasswordForm.Show();
+            changePasswordForm.ShowDialog();
         }
 
         private void addNewUserBtn_Click(object sender, EventArgs e)
         {
             NewUser addNewUser = new NewUser();
-            addNewUser.Show();
+            addNewUser.ShowDialog();
         }
     }
 }
