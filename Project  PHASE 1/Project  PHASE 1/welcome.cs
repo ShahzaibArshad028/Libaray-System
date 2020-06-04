@@ -73,7 +73,7 @@ namespace Project__PHASE_1
 
         private void RetBtn_Click(object sender, EventArgs e)
         {
-            Return returnForm = new Return();
+            Return returnForm = new Return(rightPanel.BackColor, rightPanel.ForeColor, leftPanel.BackColor);
             returnForm.ShowDialog();
         }
 
@@ -89,31 +89,31 @@ namespace Project__PHASE_1
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            Add addForm = new Add();
+            Add addForm = new Add(rightPanel.BackColor,rightPanel.ForeColor,leftPanel.BackColor);
             addForm.ShowDialog();
         }
 
         private void RemoveBtn_Click(object sender, EventArgs e)
         {
-            Remove removeForm = new Remove();
+            Remove removeForm = new Remove(rightPanel.BackColor,rightPanel.ForeColor,leftPanel.BackColor);
             removeForm.ShowDialog();  
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-            Search searchForm = new Search();
+            Search searchForm = new Search(rightPanel.BackColor, rightPanel.ForeColor, leftPanel.BackColor);
             searchForm.ShowDialog();
         }
 
         private void CngPsdBtn_Click(object sender, EventArgs e)
         {
-            ChangePassword changePasswordForm = new ChangePassword();
+            ChangePassword changePasswordForm = new ChangePassword(rightPanel.BackColor, rightPanel.ForeColor, leftPanel.BackColor);
             changePasswordForm.ShowDialog();
         }
 
         private void addNewUserBtn_Click(object sender, EventArgs e)
         {
-            NewUser addNewUser = new NewUser();
+            NewUser addNewUser = new NewUser(rightPanel.BackColor, rightPanel.ForeColor, leftPanel.BackColor);
             addNewUser.ShowDialog();
         }
     }

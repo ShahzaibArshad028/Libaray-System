@@ -12,9 +12,15 @@ namespace Project__PHASE_1
 {
     public partial class Remove : Form
     {
-        public Remove()
+    
+        public Remove(Color BackGround, Color ForeGround, Color PanelBack)
         {
             InitializeComponent();
+            this.BackColor = BackGround;
+            this.ForeColor = ForeGround;
+            RemovePanel.BackColor = PanelBack;
+            RemovePanel.ForeColor = ForeGround;
+            RemoveBtn.BackColor = BackGround;
         }
 
         private void AuthorNametxt_TextChanged(object sender, EventArgs e)

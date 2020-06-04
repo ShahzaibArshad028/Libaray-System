@@ -107,7 +107,7 @@
             // 
             // StartedButton
             // 
-            this.StartedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartedButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.StartedButton.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartedButton.Location = new System.Drawing.Point(243, 433);
             this.StartedButton.Name = "StartedButton";

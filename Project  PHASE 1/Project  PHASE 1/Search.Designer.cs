@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.SearchPanel = new System.Windows.Forms.Panel();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.CategoryTxt = new System.Windows.Forms.TextBox();
             this.Booktxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.SearchPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // SearchPanel
             // 
-            this.panel1.Controls.Add(this.SearchBtn);
-            this.panel1.Controls.Add(this.CategoryTxt);
-            this.panel1.Controls.Add(this.Booktxt);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(259, 65);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(464, 347);
-            this.panel1.TabIndex = 1;
+            this.SearchPanel.Controls.Add(this.SearchBtn);
+            this.SearchPanel.Controls.Add(this.CategoryTxt);
+            this.SearchPanel.Controls.Add(this.Booktxt);
+            this.SearchPanel.Controls.Add(this.label3);
+            this.SearchPanel.Controls.Add(this.label2);
+            this.SearchPanel.Controls.Add(this.label1);
+            this.SearchPanel.Location = new System.Drawing.Point(264, 175);
+            this.SearchPanel.Name = "SearchPanel";
+            this.SearchPanel.Size = new System.Drawing.Size(464, 347);
+            this.SearchPanel.TabIndex = 1;
             // 
             // SearchBtn
             // 
@@ -113,18 +113,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(977, 708);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.SearchPanel);
             this.Name = "Search";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Search";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.SearchPanel.ResumeLayout(false);
+            this.SearchPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel SearchPanel;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.TextBox CategoryTxt;
         private System.Windows.Forms.TextBox Booktxt;

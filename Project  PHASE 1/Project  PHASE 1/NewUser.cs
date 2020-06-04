@@ -16,5 +16,15 @@ namespace Project__PHASE_1
         {
             InitializeComponent();
         }
+
+        public NewUser(Color BackGround, Color ForeGround, Color PanelBack)
+        {
+            InitializeComponent();
+            this.BackColor = BackGround;
+            this.ForeColor = ForeGround;
+            NewUserPanel.BackColor = PanelBack;
+            NewUserPanel.ForeColor = ForeGround;
+            NewUserBtn.BackColor = BackGround;
+        }
     }
 }

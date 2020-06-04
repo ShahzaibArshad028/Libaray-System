@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Confirmbtn = new System.Windows.Forms.Button();
+            this.NewUserPanel = new System.Windows.Forms.Panel();
+            this.NewUserBtn = new System.Windows.Forms.Button();
             this.CnfPsdtxt = new System.Windows.Forms.TextBox();
             this.NewPsdTxt = new System.Windows.Forms.TextBox();
             this.OldPsdTxt = new System.Windows.Forms.TextBox();
@@ -37,33 +37,34 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.NewUserPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // NewUserPanel
             // 
-            this.panel1.Controls.Add(this.Confirmbtn);
-            this.panel1.Controls.Add(this.CnfPsdtxt);
-            this.panel1.Controls.Add(this.NewPsdTxt);
-            this.panel1.Controls.Add(this.OldPsdTxt);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(256, 126);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(464, 456);
-            this.panel1.TabIndex = 2;
+            this.NewUserPanel.Controls.Add(this.NewUserBtn);
+            this.NewUserPanel.Controls.Add(this.CnfPsdtxt);
+            this.NewUserPanel.Controls.Add(this.NewPsdTxt);
+            this.NewUserPanel.Controls.Add(this.OldPsdTxt);
+            this.NewUserPanel.Controls.Add(this.label4);
+            this.NewUserPanel.Controls.Add(this.label3);
+            this.NewUserPanel.Controls.Add(this.label2);
+            this.NewUserPanel.Controls.Add(this.label1);
+            this.NewUserPanel.Location = new System.Drawing.Point(256, 126);
+            this.NewUserPanel.Name = "NewUserPanel";
+            this.NewUserPanel.Size = new System.Drawing.Size(464, 456);
+            this.NewUserPanel.TabIndex = 2;
             // 
-            // Confirmbtn
+            // NewUserBtn
             // 
-            this.Confirmbtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Confirmbtn.Location = new System.Drawing.Point(188, 366);
-            this.Confirmbtn.Name = "Confirmbtn";
-            this.Confirmbtn.Size = new System.Drawing.Size(91, 32);
-            this.Confirmbtn.TabIndex = 7;
-            this.Confirmbtn.Text = "Registered";
-            this.Confirmbtn.UseVisualStyleBackColor = true;
+            this.NewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.NewUserBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewUserBtn.Location = new System.Drawing.Point(188, 366);
+            this.NewUserBtn.Name = "NewUserBtn";
+            this.NewUserBtn.Size = new System.Drawing.Size(102, 32);
+            this.NewUserBtn.TabIndex = 7;
+            this.NewUserBtn.Text = "Registered";
+            this.NewUserBtn.UseVisualStyleBackColor = true;
             // 
             // CnfPsdtxt
             // 
@@ -134,19 +135,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(977, 708);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.NewUserPanel);
             this.Name = "NewUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NewUser";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.NewUserPanel.ResumeLayout(false);
+            this.NewUserPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Confirmbtn;
+        private System.Windows.Forms.Panel NewUserPanel;
+        private System.Windows.Forms.Button NewUserBtn;
         private System.Windows.Forms.TextBox CnfPsdtxt;
         private System.Windows.Forms.TextBox NewPsdTxt;
         private System.Windows.Forms.TextBox OldPsdTxt;

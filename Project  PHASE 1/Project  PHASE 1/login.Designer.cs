@@ -86,7 +86,7 @@
             // ExitBtn
             // 
             this.ExitBtn.BackColor = System.Drawing.Color.DarkRed;
-            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ExitBtn.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitBtn.ForeColor = System.Drawing.Color.White;
             this.ExitBtn.Location = new System.Drawing.Point(119, 401);
@@ -109,7 +109,7 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginBtn.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.Location = new System.Drawing.Point(119, 348);
             this.loginBtn.Name = "loginBtn";
@@ -125,6 +125,7 @@
             this.psdText.Font = new System.Drawing.Font("Raleway", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.psdText.Location = new System.Drawing.Point(42, 288);
             this.psdText.Name = "psdText";
+            this.psdText.PasswordChar = '*';
             this.psdText.Size = new System.Drawing.Size(291, 29);
             this.psdText.TabIndex = 6;
             // 

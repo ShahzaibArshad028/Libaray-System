@@ -42,9 +42,9 @@
             this.imgPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rightPanel = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.leftPanel.SuspendLayout();
             this.BtnPanel.SuspendLayout();
             this.imgPanel.SuspendLayout();
@@ -214,15 +214,15 @@
             this.rightPanel.Size = new System.Drawing.Size(1008, 747);
             this.rightPanel.TabIndex = 1;
             // 
-            // pictureBox2
+            // label2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(283, 124);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(490, 392);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Raleway Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(382, 563);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(315, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "FInding Words for What We Already Know";
             // 
             // label1
             // 
@@ -234,15 +234,15 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome to Library Portal";
             // 
-            // label2
+            // pictureBox2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Raleway Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(382, 563);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(315, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "FInding Words for What We Already Know";
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(283, 124);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(490, 392);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // welcome
             // 

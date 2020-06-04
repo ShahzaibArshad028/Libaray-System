@@ -28,42 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.Confirmbtn = new System.Windows.Forms.Button();
+            this.ReturnPanel = new System.Windows.Forms.Panel();
+            this.ReturnBtn = new System.Windows.Forms.Button();
+            this.CnfPsdtxt = new System.Windows.Forms.TextBox();
             this.NewPsdTxt = new System.Windows.Forms.TextBox();
             this.OldPsdTxt = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.CnfPsdtxt = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.ReturnPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // ReturnPanel
             // 
-            this.panel1.Controls.Add(this.Confirmbtn);
-            this.panel1.Controls.Add(this.CnfPsdtxt);
-            this.panel1.Controls.Add(this.NewPsdTxt);
-            this.panel1.Controls.Add(this.OldPsdTxt);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(256, 126);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(464, 456);
-            this.panel1.TabIndex = 1;
+            this.ReturnPanel.Controls.Add(this.ReturnBtn);
+            this.ReturnPanel.Controls.Add(this.CnfPsdtxt);
+            this.ReturnPanel.Controls.Add(this.NewPsdTxt);
+            this.ReturnPanel.Controls.Add(this.OldPsdTxt);
+            this.ReturnPanel.Controls.Add(this.label4);
+            this.ReturnPanel.Controls.Add(this.label3);
+            this.ReturnPanel.Controls.Add(this.label2);
+            this.ReturnPanel.Controls.Add(this.label1);
+            this.ReturnPanel.Location = new System.Drawing.Point(256, 126);
+            this.ReturnPanel.Name = "ReturnPanel";
+            this.ReturnPanel.Size = new System.Drawing.Size(464, 456);
+            this.ReturnPanel.TabIndex = 1;
             // 
-            // Confirmbtn
+            // ReturnBtn
             // 
-            this.Confirmbtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Confirmbtn.Location = new System.Drawing.Point(188, 366);
-            this.Confirmbtn.Name = "Confirmbtn";
-            this.Confirmbtn.Size = new System.Drawing.Size(91, 32);
-            this.Confirmbtn.TabIndex = 7;
-            this.Confirmbtn.Text = "Return";
-            this.Confirmbtn.UseVisualStyleBackColor = true;
+            this.ReturnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ReturnBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnBtn.Location = new System.Drawing.Point(188, 366);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.Size = new System.Drawing.Size(91, 32);
+            this.ReturnBtn.TabIndex = 7;
+            this.ReturnBtn.Text = "Return";
+            this.ReturnBtn.UseVisualStyleBackColor = true;
+            // 
+            // CnfPsdtxt
+            // 
+            this.CnfPsdtxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CnfPsdtxt.Location = new System.Drawing.Point(103, 302);
+            this.CnfPsdtxt.Name = "CnfPsdtxt";
+            this.CnfPsdtxt.Size = new System.Drawing.Size(266, 30);
+            this.CnfPsdtxt.TabIndex = 6;
             // 
             // NewPsdTxt
             // 
@@ -80,6 +89,16 @@
             this.OldPsdTxt.Name = "OldPsdTxt";
             this.OldPsdTxt.Size = new System.Drawing.Size(266, 30);
             this.OldPsdTxt.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(98, 277);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 22);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Category";
             // 
             // label3
             // 
@@ -112,42 +131,25 @@
             this.label1.Text = "Return Book";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // CnfPsdtxt
-            // 
-            this.CnfPsdtxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CnfPsdtxt.Location = new System.Drawing.Point(103, 302);
-            this.CnfPsdtxt.Name = "CnfPsdtxt";
-            this.CnfPsdtxt.Size = new System.Drawing.Size(266, 30);
-            this.CnfPsdtxt.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(98, 277);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 22);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Category";
-            // 
             // Return
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(977, 708);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ReturnPanel);
             this.Name = "Return";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Return";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ReturnPanel.ResumeLayout(false);
+            this.ReturnPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Confirmbtn;
+        private System.Windows.Forms.Panel ReturnPanel;
+        private System.Windows.Forms.Button ReturnBtn;
         private System.Windows.Forms.TextBox NewPsdTxt;
         private System.Windows.Forms.TextBox OldPsdTxt;
         private System.Windows.Forms.Label label3;

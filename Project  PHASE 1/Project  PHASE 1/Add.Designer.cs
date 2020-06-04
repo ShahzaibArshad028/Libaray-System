@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.AddPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.QuantityTxt = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.CategoryTxt = new System.Windows.Forms.TextBox();
             this.AuthorNametxt = new System.Windows.Forms.TextBox();
             this.bookTitleTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.QuantityTxt = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.AddBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.AddPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,16 +60,36 @@
             this.AddPanel.Size = new System.Drawing.Size(433, 471);
             this.AddPanel.TabIndex = 0;
             // 
-            // label1
+            // AddBtn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Raleway", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(152, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Add Book";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBtn.Location = new System.Drawing.Point(158, 398);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(91, 32);
+            this.AddBtn.TabIndex = 15;
+            this.AddBtn.Text = "Add";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            // 
+            // QuantityTxt
+            // 
+            this.QuantityTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityTxt.Location = new System.Drawing.Point(84, 349);
+            this.QuantityTxt.Name = "QuantityTxt";
+            this.QuantityTxt.Size = new System.Drawing.Size(266, 30);
+            this.QuantityTxt.TabIndex = 14;
+            this.QuantityTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(79, 324);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 22);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Quantity ";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // CategoryTxt
             // 
@@ -131,35 +151,16 @@
             this.label2.Text = "Book Title";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // QuantityTxt
+            // label1
             // 
-            this.QuantityTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityTxt.Location = new System.Drawing.Point(84, 349);
-            this.QuantityTxt.Name = "QuantityTxt";
-            this.QuantityTxt.Size = new System.Drawing.Size(266, 30);
-            this.QuantityTxt.TabIndex = 14;
-            this.QuantityTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(79, 324);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 22);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Quantity ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBtn.Location = new System.Drawing.Point(158, 398);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(91, 32);
-            this.AddBtn.TabIndex = 15;
-            this.AddBtn.Text = "Add";
-            this.AddBtn.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Raleway", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(152, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Add Book";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Add
             // 
@@ -168,7 +169,9 @@
             this.ClientSize = new System.Drawing.Size(977, 708);
             this.Controls.Add(this.AddPanel);
             this.Name = "Add";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add";
+            this.Load += new System.EventHandler(this.Add_Load);
             this.AddPanel.ResumeLayout(false);
             this.AddPanel.PerformLayout();
             this.ResumeLayout(false);

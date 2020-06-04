@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AddPanel = new System.Windows.Forms.Panel();
+            this.RemovePanel = new System.Windows.Forms.Panel();
+            this.QuantityAvaTxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.RemoveBtn = new System.Windows.Forms.Button();
             this.QuantityToRemoveTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -39,31 +41,47 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.QuantityAvaTxt = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.AddPanel.SuspendLayout();
+            this.RemovePanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // AddPanel
+            // RemovePanel
             // 
-            this.AddPanel.Controls.Add(this.QuantityAvaTxt);
-            this.AddPanel.Controls.Add(this.label6);
-            this.AddPanel.Controls.Add(this.RemoveBtn);
-            this.AddPanel.Controls.Add(this.QuantityToRemoveTxt);
-            this.AddPanel.Controls.Add(this.label5);
-            this.AddPanel.Controls.Add(this.CategoryTxt);
-            this.AddPanel.Controls.Add(this.AuthorNametxt);
-            this.AddPanel.Controls.Add(this.bookTitleTxt);
-            this.AddPanel.Controls.Add(this.label4);
-            this.AddPanel.Controls.Add(this.label3);
-            this.AddPanel.Controls.Add(this.label2);
-            this.AddPanel.Controls.Add(this.label1);
-            this.AddPanel.Font = new System.Drawing.Font("Raleway", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddPanel.Location = new System.Drawing.Point(272, 119);
-            this.AddPanel.Name = "AddPanel";
-            this.AddPanel.Size = new System.Drawing.Size(433, 495);
-            this.AddPanel.TabIndex = 1;
-            this.AddPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AddPanel_Paint);
+            this.RemovePanel.Controls.Add(this.QuantityAvaTxt);
+            this.RemovePanel.Controls.Add(this.label6);
+            this.RemovePanel.Controls.Add(this.RemoveBtn);
+            this.RemovePanel.Controls.Add(this.QuantityToRemoveTxt);
+            this.RemovePanel.Controls.Add(this.label5);
+            this.RemovePanel.Controls.Add(this.CategoryTxt);
+            this.RemovePanel.Controls.Add(this.AuthorNametxt);
+            this.RemovePanel.Controls.Add(this.bookTitleTxt);
+            this.RemovePanel.Controls.Add(this.label4);
+            this.RemovePanel.Controls.Add(this.label3);
+            this.RemovePanel.Controls.Add(this.label2);
+            this.RemovePanel.Controls.Add(this.label1);
+            this.RemovePanel.Font = new System.Drawing.Font("Raleway", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemovePanel.Location = new System.Drawing.Point(272, 97);
+            this.RemovePanel.Name = "RemovePanel";
+            this.RemovePanel.Size = new System.Drawing.Size(433, 495);
+            this.RemovePanel.TabIndex = 1;
+            this.RemovePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AddPanel_Paint);
+            // 
+            // QuantityAvaTxt
+            // 
+            this.QuantityAvaTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityAvaTxt.Location = new System.Drawing.Point(82, 313);
+            this.QuantityAvaTxt.Name = "QuantityAvaTxt";
+            this.QuantityAvaTxt.Size = new System.Drawing.Size(266, 30);
+            this.QuantityAvaTxt.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(78, 288);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(159, 22);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Quantity Avaiable";
             // 
             // RemoveBtn
             // 
@@ -158,41 +176,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Remove Book";
             // 
-            // QuantityAvaTxt
-            // 
-            this.QuantityAvaTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityAvaTxt.Location = new System.Drawing.Point(82, 313);
-            this.QuantityAvaTxt.Name = "QuantityAvaTxt";
-            this.QuantityAvaTxt.Size = new System.Drawing.Size(266, 30);
-            this.QuantityAvaTxt.TabIndex = 17;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(78, 288);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 22);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Quantity Avaiable";
-            // 
             // Remove
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(977, 708);
-            this.Controls.Add(this.AddPanel);
+            this.Controls.Add(this.RemovePanel);
             this.Name = "Remove";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Remove";
-            this.AddPanel.ResumeLayout(false);
-            this.AddPanel.PerformLayout();
+            this.RemovePanel.ResumeLayout(false);
+            this.RemovePanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel AddPanel;
+        private System.Windows.Forms.Panel RemovePanel;
         private System.Windows.Forms.Button RemoveBtn;
         private System.Windows.Forms.TextBox QuantityToRemoveTxt;
         private System.Windows.Forms.Label label5;

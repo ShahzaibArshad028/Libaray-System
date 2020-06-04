@@ -12,23 +12,16 @@ namespace Project__PHASE_1
 {
     public partial class Add : Form
     {
-        public Add()
-        {
-            InitializeComponent();
-        }
+  
 
-        public Add(Color BackGround, Color ForeGround, Color PanelBack, Color PanelFore)
+        public Add(Color BackGround, Color ForeGround, Color PanelBack)
         {
             InitializeComponent();
             this.BackColor = BackGround;
             this.ForeColor = ForeGround;
             AddPanel.BackColor = PanelBack;
-            AddPanel.ForeColor = PanelFore;
-            //if (this.BackColor == Color.FromArgb(28, 28, 33))
-            //{
-            //    AddBtn.BackColor = Color.FromArgb(50, 50, 66);
-            //    AddBtn.ForeColor = Color.FromArgb(255, 255, 255);
-            //}
+            AddPanel.ForeColor = ForeGround;
+            AddBtn.BackColor = BackGround;
 
         }
 
@@ -73,6 +66,11 @@ namespace Project__PHASE_1
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Add_Load(object sender, EventArgs e)
         {
 
         }

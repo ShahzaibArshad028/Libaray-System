@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project__PHASE_1
 {
     public partial class login : Form
     {
+        SqlConnection connection;
         public login()
         {
+            
             InitializeComponent();
+      
+            connection = new SqlConnection(@"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C: \\Users\\shahz\\OneDrive\\Documents\\GitHub\\Libaray - System\\Project  PHASE 1\\DB\libraryDB.mdf;Integrated Security=True;Connect Timeout=30");
+
         }
 
         public login(Color BackGround,Color ForeGround,Color PanelBack,Color PanelFore)
@@ -72,6 +78,8 @@ namespace Project__PHASE_1
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
+            string query = "Select From login Where username='"+userText.Text.Trim()+"and psd ='"+psdText.Text.Trim()+"'";
+
             welcome WelForm= new welcome(this.BackColor,
                 this.ForeColor, loginPanel.BackColor, loginPanel.ForeColor);
             this.Hide();
