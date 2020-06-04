@@ -32,5 +32,11 @@ namespace Project__PHASE_1
         {
 
         }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }
