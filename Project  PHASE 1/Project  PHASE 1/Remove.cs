@@ -26,21 +26,15 @@ namespace Project__PHASE_1
             RemovePanel.BackColor = PanelBack;
             RemovePanel.ForeColor = ForeGround;
             RemoveBtn.BackColor = BackGround;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(275, 117);
         }
 
-        private void AuthorNametxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AddPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        
 
         }
 
@@ -73,7 +67,7 @@ namespace Project__PHASE_1
                 }
                 removeStateNow.ExecuteNonQuery();
             }
-            else
+            else 
             {
                 MessageBox.Show("connection failed");
 
@@ -151,6 +145,12 @@ namespace Project__PHASE_1
 
             }
             connection.Close();
+        }
+
+        private void RemoveSuccess_Click(object sender, EventArgs e)
+        {
+            this.Refresh();
+            RemoveSuccess.Visible = false;
         }
     }
 }

@@ -25,11 +25,15 @@ namespace Project__PHASE_1
             ChangePasswordPanel.ForeColor = ForeGround;
             ChangePasswordBtn.BackColor = BackGround;
             currentLogin = currentLOGIN;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(275, 117);
+
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+          
         }
 
         private void ChangePassword_Load(object sender, EventArgs e)
@@ -46,30 +50,42 @@ namespace Project__PHASE_1
 
         private void ChangePasswordBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-      
-
-            if (connection.State == System.Data.ConnectionState.Open)
+            if (OldPsdTxt.Text == String.Empty || NewPsdTxt.Text == String.Empty || CnfPsdtxt.Text == String.Empty)
             {
-                SqlCommand sql = new SqlCommand("Update Login Set psd=@psd Where userName='"+currentLogin+ "'and psd=@psdOld", connection);
-                sql.Parameters.Add("@psd", this.NewPsdTxt.Text);
-                sql.Parameters.Add("@psdOld", this.OldPsdTxt.Text);
-
-                if (NewPsdTxt.Text != CnfPsdtxt.Text)
-                {
-                    MessageBox.Show("New Password and Confirm Password are Not Same");
-                }
-                else
-                 sql.ExecuteNonQuery();
-
+                empty.Visible = true;
             }
             else
             {
-                MessageBox.Show("connection failed");
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
 
+
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    SqlCommand sql = new SqlCommand("Update Login Set psd=@psd Where userName='" + currentLogin + "'and psd=@psdOld", connection);
+                    sql.Parameters.Add("@psd", this.NewPsdTxt.Text);
+                    sql.Parameters.Add("@psdOld", this.OldPsdTxt.Text);
+
+                    if (NewPsdTxt.Text != CnfPsdtxt.Text)
+                    {
+                        MessageBox.Show("New Password and Confirm Password are Not Same");
+                    }
+                    else
+                        sql.ExecuteNonQuery();
+
+                }
+                else
+                {
+                    MessageBox.Show("connection failed");
+
+                }
+                connection.Close();
             }
-            connection.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            empty.Visible = false;
         }
     }
 }

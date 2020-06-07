@@ -40,10 +40,14 @@
             this.psdLabel = new System.Windows.Forms.Label();
             this.userlabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Wrong = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tryAgainBtn = new System.Windows.Forms.Button();
             this.loginPanel.SuspendLayout();
             this.myLoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Wrong.SuspendLayout();
             this.SuspendLayout();
             // 
             // titleLogin
@@ -170,11 +174,49 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // Wrong
+            // 
+            this.Wrong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.Wrong.Controls.Add(this.label6);
+            this.Wrong.Controls.Add(this.tryAgainBtn);
+            this.Wrong.Location = new System.Drawing.Point(409, 305);
+            this.Wrong.Name = "Wrong";
+            this.Wrong.Size = new System.Drawing.Size(466, 194);
+            this.Wrong.TabIndex = 3;
+            this.Wrong.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(90, 65);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(277, 19);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "User Name or Password is Incorrect";
+            // 
+            // tryAgainBtn
+            // 
+            this.tryAgainBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.tryAgainBtn.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.tryAgainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tryAgainBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tryAgainBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.tryAgainBtn.Location = new System.Drawing.Point(186, 112);
+            this.tryAgainBtn.Name = "tryAgainBtn";
+            this.tryAgainBtn.Size = new System.Drawing.Size(91, 32);
+            this.tryAgainBtn.TabIndex = 16;
+            this.tryAgainBtn.Text = "Try Again";
+            this.tryAgainBtn.UseVisualStyleBackColor = false;
+            this.tryAgainBtn.Click += new System.EventHandler(this.tryAgainBtn_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 749);
+            this.Controls.Add(this.Wrong);
             this.Controls.Add(this.loginPanel);
             this.Font = new System.Drawing.Font("Raleway", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -189,6 +231,8 @@
             this.myLoginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Wrong.ResumeLayout(false);
+            this.Wrong.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +250,8 @@
         private System.Windows.Forms.Panel myLoginPanel;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button ExitBtn;
+        private System.Windows.Forms.Panel Wrong;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button tryAgainBtn;
     }
 }

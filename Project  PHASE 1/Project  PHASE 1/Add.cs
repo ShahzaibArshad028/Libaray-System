@@ -17,56 +17,15 @@ namespace Project__PHASE_1
         public Add(Color BackGround, Color ForeGround, Color PanelBack)
         {
             InitializeComponent();
+           // AddConfirm.BackColor = Color.FromArgb(50, Color.Black);
+            AddConfirm.Visible = false;
             this.BackColor = BackGround;
             this.ForeColor = ForeGround;
             AddPanel.BackColor = PanelBack;
             AddPanel.ForeColor = ForeGround;
             AddBtn.BackColor = BackGround;
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CnfPsdtxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NewPsdTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OldPsdTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(275, 117);
 
         }
 
@@ -85,30 +44,60 @@ namespace Project__PHASE_1
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+         
 
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-            if (connection.State == System.Data.ConnectionState.Open)
+            if (bookTitleTxt.Text == String.Empty || AuthorNametxt.Text == String.Empty || CategoryTxt.Text == String.Empty || QuantityTxt.Text == String.Empty)
             {
-                SqlCommand sql = new SqlCommand("Insert into BookInfo Values (@BookName,@AuthorName ,@Category,@Quantity)", connection);
-                sql.Parameters.Add("@BookName", this.bookTitleTxt.Text);
-                sql.Parameters.Add("@AuthorName", this.AuthorNametxt.Text);
-                sql.Parameters.Add("@Category", this.CategoryTxt.Text);
-                //slider number add kar la bhai !!
-                sql.Parameters.Add("@Quantity", this.QuantityTxt.Text);
-                sql.ExecuteNonQuery();
-           
+                empty.Visible = true;
             }
             else
             {
-                MessageBox.Show("connection failed");
+
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Open)
+                {
+                    SqlCommand sql = new SqlCommand("Insert into BookInfo Values (@BookName,@AuthorName ,@Category,@Quantity)", connection);
+                    sql.Parameters.Add("@BookName", this.bookTitleTxt.Text);
+                    sql.Parameters.Add("@AuthorName", this.AuthorNametxt.Text);
+                    sql.Parameters.Add("@Category", this.CategoryTxt.Text);
+                    //slider number add kar la bhai !!
+                    sql.Parameters.Add("@Quantity", this.QuantityTxt.Text);
+                    sql.ExecuteNonQuery();
+
+                    AddConfirm.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("connection failed");
+
+                }
+                connection.Close();
 
             }
-            connection.Close();
+        }
+
+
+  
+        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            empty.Visible = false;
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddConfirm.Visible = false;
+            bookTitleTxt.Text = String.Empty;
+            AuthorNametxt.Text = String.Empty;
+            CategoryTxt.Text = String.Empty;
+            QuantityTxt.Text = String.Empty;
         }
     }
 }

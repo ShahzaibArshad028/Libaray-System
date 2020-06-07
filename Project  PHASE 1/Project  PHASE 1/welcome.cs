@@ -29,7 +29,9 @@ namespace Project__PHASE_1
             if (PanelBack == Color.FromArgb(220, 220, 220))
             {
                 Color LIGHT = PanelBack;
-                imgPanel.BackColor = LIGHT;
+                //imgPanel.BackColor = LIGHT;
+                imgPanel.BackColor = Color.FromArgb(190, 190, 190);
+
                 AddBtn.BackColor = LIGHT;
                 RemoveBtn.BackColor = LIGHT;
                 RetBtn.BackColor = LIGHT;
@@ -39,8 +41,9 @@ namespace Project__PHASE_1
                 ExitBtn.BackColor = LIGHT;
                 SearchBtn.BackColor = LIGHT;
                 leftPanel.BackColor = Color.FromArgb(190, 190, 190);
-
-            }
+                //leftPanel.BackColor = LIGHT;
+                rightPanel.BackColor = PanelBack;
+                panel1.BackColor = Color.FromArgb(255,155,155,155);            }
             else
             {
                 Color DARK = PanelBack;
@@ -51,9 +54,15 @@ namespace Project__PHASE_1
                 addNewUserBtn.BackColor = DARK;
                 LogoutBtn.BackColor = DARK;
                 ExitBtn.BackColor = DARK;
-                imgPanel.BackColor = DARK;
+                //imgPanel.BackColor = DARK;
+                imgPanel.BackColor = Color.FromArgb(70, 70, 105);
                 SearchBtn.BackColor = DARK;
                 leftPanel.BackColor = Color.FromArgb(70,70,105);
+                //leftPanel.BackColor = this.BackColor;
+                //leftPanel.BackColor = DARK;
+
+                rightPanel.BackColor = this.BackColor;
+                panel1.BackColor = DARK;
             }
         }
         private void welcome_Load(object sender, EventArgs e)
@@ -76,6 +85,7 @@ namespace Project__PHASE_1
 
         private void RetBtn_Click(object sender, EventArgs e)
         {
+    
             Return returnForm = new Return(rightPanel.BackColor, rightPanel.ForeColor, leftPanel.BackColor);
             returnForm.ShowDialog();
         }
@@ -92,18 +102,21 @@ namespace Project__PHASE_1
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
+      
             Add addForm = new Add(rightPanel.BackColor,rightPanel.ForeColor,leftPanel.BackColor);
             addForm.ShowDialog();
         }
 
         private void RemoveBtn_Click(object sender, EventArgs e)
         {
+            
             Remove removeForm = new Remove(rightPanel.BackColor,rightPanel.ForeColor,leftPanel.BackColor);
             removeForm.ShowDialog();  
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
+         
             Search searchForm = new Search(rightPanel.BackColor, rightPanel.ForeColor, leftPanel.BackColor);
             searchForm.ShowDialog();
         }

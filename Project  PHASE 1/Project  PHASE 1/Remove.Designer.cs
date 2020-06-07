@@ -44,13 +44,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.RemoveSuccess = new System.Windows.Forms.Button();
             this.RemovePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // RemovePanel
             // 
+            this.RemovePanel.Controls.Add(this.panel1);
             this.RemovePanel.Controls.Add(this.exit);
             this.RemovePanel.Controls.Add(this.QuantityAvaTxt);
             this.RemovePanel.Controls.Add(this.label6);
@@ -69,7 +74,6 @@
             this.RemovePanel.Name = "RemovePanel";
             this.RemovePanel.Size = new System.Drawing.Size(433, 495);
             this.RemovePanel.TabIndex = 1;
-            this.RemovePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AddPanel_Paint);
             // 
             // exit
             // 
@@ -145,7 +149,6 @@
             this.AuthorNametxt.Name = "AuthorNametxt";
             this.AuthorNametxt.Size = new System.Drawing.Size(266, 30);
             this.AuthorNametxt.TabIndex = 11;
-            this.AuthorNametxt.TextChanged += new System.EventHandler(this.AuthorNametxt_TextChanged);
             // 
             // bookTitleTxt
             // 
@@ -206,6 +209,42 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(81)))));
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.RemoveSuccess);
+            this.panel1.Location = new System.Drawing.Point(0, 150);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(433, 194);
+            this.panel1.TabIndex = 18;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(115, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(221, 19);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Books Successfully Remove";
+            // 
+            // RemoveSuccess
+            // 
+            this.RemoveSuccess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(81)))));
+            this.RemoveSuccess.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.RemoveSuccess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveSuccess.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveSuccess.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RemoveSuccess.Location = new System.Drawing.Point(174, 112);
+            this.RemoveSuccess.Name = "RemoveSuccess";
+            this.RemoveSuccess.Size = new System.Drawing.Size(91, 32);
+            this.RemoveSuccess.TabIndex = 16;
+            this.RemoveSuccess.Text = "Done";
+            this.RemoveSuccess.UseVisualStyleBackColor = false;
+            this.RemoveSuccess.Click += new System.EventHandler(this.RemoveSuccess_Click);
+            // 
             // Remove
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,6 +261,8 @@
             this.RemovePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -243,5 +284,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox exit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button RemoveSuccess;
     }
 }

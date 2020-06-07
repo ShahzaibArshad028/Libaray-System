@@ -14,6 +14,8 @@ namespace Project__PHASE_1
     public partial class Search : Form
     {
         string connectionString = @"Data Source=DESKTOP-K9UJB8G;Initial Catalog=PorjectDataBase;Integrated Security=True";
+
+        
         public Search(Color BackGround, Color ForeGround, Color PanelBack)
         {
             InitializeComponent();
@@ -24,6 +26,10 @@ namespace Project__PHASE_1
             SearchBtn.BackColor = BackGround;
             SearchBook.BackColor = SearchPanel.ForeColor;
             SearchBook.ForeColor = SearchPanel.BackColor;
+
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(275, 117);
+
         }
 
         private void Confirmbtn_Click(object sender, EventArgs e)
@@ -50,17 +56,25 @@ namespace Project__PHASE_1
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+         
         }
 
         private void Search_Load(object sender, EventArgs e)
-        {
-            if (this.ForeColor == Color.FromArgb(240, 240, 240))  //light mode
+
+        { 
+
+            if (this.ForeColor == Color.FromArgb(255,240, 240, 240))  //light mode
             {
                 exit.Image = Image.FromFile("C:\\Users\\shahz\\OneDrive\\Documents\\GitHub\\Libaray-System\\Project Pictures\\icons\\exit_White.png");
+                SearchBook.ForeColor = Color.FromArgb(255,240, 240, 240);
+                this.BackColor = Color.FromArgb(255, 200, 200, 200);
             }
             else
             {
                 exit.Image = Image.FromFile("C:\\Users\\shahz\\OneDrive\\Documents\\GitHub\\Libaray-System\\Project Pictures\\icons\\exit_Black.png");
+                SearchBook.ForeColor = Color.FromArgb(255, 100, 100, 100);
+                this.BackColor = Color.FromArgb(255, 95, 95, 95);
+
             }
         }
     }

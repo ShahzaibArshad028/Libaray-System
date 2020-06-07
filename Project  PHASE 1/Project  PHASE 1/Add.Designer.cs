@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add));
             this.AddPanel = new System.Windows.Forms.Panel();
+            this.AddConfirm = new System.Windows.Forms.Panel();
+            this.empty = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.PictureBox();
             this.AddBtn = new System.Windows.Forms.Button();
             this.QuantityTxt = new System.Windows.Forms.TextBox();
@@ -43,12 +49,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AddPanel.SuspendLayout();
+            this.AddConfirm.SuspendLayout();
+            this.empty.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // AddPanel
             // 
+            this.AddPanel.Controls.Add(this.empty);
+            this.AddPanel.Controls.Add(this.AddConfirm);
             this.AddPanel.Controls.Add(this.exit);
             this.AddPanel.Controls.Add(this.AddBtn);
             this.AddPanel.Controls.Add(this.QuantityTxt);
@@ -66,6 +76,79 @@
             this.AddPanel.Size = new System.Drawing.Size(433, 471);
             this.AddPanel.TabIndex = 0;
             // 
+            // AddConfirm
+            // 
+            this.AddConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(81)))));
+            this.AddConfirm.Controls.Add(this.label6);
+            this.AddConfirm.Controls.Add(this.button1);
+            this.AddConfirm.Location = new System.Drawing.Point(0, 130);
+            this.AddConfirm.Name = "AddConfirm";
+            this.AddConfirm.Size = new System.Drawing.Size(433, 194);
+            this.AddConfirm.TabIndex = 2;
+            // 
+            // empty
+            // 
+            this.empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.empty.Controls.Add(this.label7);
+            this.empty.Controls.Add(this.button2);
+            this.empty.Location = new System.Drawing.Point(0, 130);
+            this.empty.Name = "empty";
+            this.empty.Size = new System.Drawing.Size(433, 194);
+            this.empty.TabIndex = 18;
+            this.empty.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(115, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(233, 19);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Some Input Boxes are Unfilled";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(164, 113);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 32);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Enter Again";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(115, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(209, 19);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Books Successfully Added";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(81)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(174, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 32);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Done";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // exit
             // 
             this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
@@ -79,7 +162,8 @@
             // 
             // AddBtn
             // 
-            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddBtn.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBtn.Location = new System.Drawing.Point(157, 401);
             this.AddBtn.Name = "AddBtn";
@@ -96,7 +180,6 @@
             this.QuantityTxt.Name = "QuantityTxt";
             this.QuantityTxt.Size = new System.Drawing.Size(266, 30);
             this.QuantityTxt.TabIndex = 14;
-            this.QuantityTxt.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
             // 
@@ -107,7 +190,6 @@
             this.label5.Size = new System.Drawing.Size(86, 22);
             this.label5.TabIndex = 13;
             this.label5.Text = "Quantity ";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // CategoryTxt
             // 
@@ -116,7 +198,6 @@
             this.CategoryTxt.Name = "CategoryTxt";
             this.CategoryTxt.Size = new System.Drawing.Size(266, 30);
             this.CategoryTxt.TabIndex = 12;
-            this.CategoryTxt.TextChanged += new System.EventHandler(this.CnfPsdtxt_TextChanged);
             // 
             // AuthorNametxt
             // 
@@ -125,7 +206,6 @@
             this.AuthorNametxt.Name = "AuthorNametxt";
             this.AuthorNametxt.Size = new System.Drawing.Size(266, 30);
             this.AuthorNametxt.TabIndex = 11;
-            this.AuthorNametxt.TextChanged += new System.EventHandler(this.NewPsdTxt_TextChanged);
             // 
             // bookTitleTxt
             // 
@@ -134,7 +214,6 @@
             this.bookTitleTxt.Name = "bookTitleTxt";
             this.bookTitleTxt.Size = new System.Drawing.Size(266, 30);
             this.bookTitleTxt.TabIndex = 10;
-            this.bookTitleTxt.TextChanged += new System.EventHandler(this.OldPsdTxt_TextChanged);
             // 
             // label4
             // 
@@ -145,7 +224,6 @@
             this.label4.Size = new System.Drawing.Size(90, 22);
             this.label4.TabIndex = 9;
             this.label4.Text = "Category";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -156,7 +234,6 @@
             this.label3.Size = new System.Drawing.Size(127, 22);
             this.label3.TabIndex = 8;
             this.label3.Text = "Author Name";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -167,7 +244,6 @@
             this.label2.Size = new System.Drawing.Size(97, 22);
             this.label2.TabIndex = 7;
             this.label2.Text = "Book Title";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -178,7 +254,6 @@
             this.label1.Size = new System.Drawing.Size(137, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Book";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -204,6 +279,10 @@
             this.Load += new System.EventHandler(this.Add_Load);
             this.AddPanel.ResumeLayout(false);
             this.AddPanel.PerformLayout();
+            this.AddConfirm.ResumeLayout(false);
+            this.AddConfirm.PerformLayout();
+            this.empty.ResumeLayout(false);
+            this.empty.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -225,5 +304,11 @@
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox exit;
+        private System.Windows.Forms.Panel AddConfirm;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel empty;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button2;
     }
 }

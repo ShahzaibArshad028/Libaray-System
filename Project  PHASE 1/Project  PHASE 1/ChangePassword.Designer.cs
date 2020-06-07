@@ -39,13 +39,22 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.empty = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.AddConfirm = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.ChangePasswordPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
+            this.empty.SuspendLayout();
+            this.AddConfirm.SuspendLayout();
             this.SuspendLayout();
             // 
             // ChangePasswordPanel
             // 
             this.ChangePasswordPanel.Controls.Add(this.exit);
+            this.ChangePasswordPanel.Controls.Add(this.AddConfirm);
             this.ChangePasswordPanel.Controls.Add(this.ChangePasswordBtn);
             this.ChangePasswordPanel.Controls.Add(this.CnfPsdtxt);
             this.ChangePasswordPanel.Controls.Add(this.NewPsdTxt);
@@ -87,6 +96,7 @@
             this.CnfPsdtxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CnfPsdtxt.Location = new System.Drawing.Point(78, 309);
             this.CnfPsdtxt.Name = "CnfPsdtxt";
+            this.CnfPsdtxt.PasswordChar = '*';
             this.CnfPsdtxt.Size = new System.Drawing.Size(266, 30);
             this.CnfPsdtxt.TabIndex = 6;
             // 
@@ -95,6 +105,7 @@
             this.NewPsdTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewPsdTxt.Location = new System.Drawing.Point(78, 230);
             this.NewPsdTxt.Name = "NewPsdTxt";
+            this.NewPsdTxt.PasswordChar = '*';
             this.NewPsdTxt.Size = new System.Drawing.Size(266, 30);
             this.NewPsdTxt.TabIndex = 5;
             // 
@@ -103,6 +114,7 @@
             this.OldPsdTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OldPsdTxt.Location = new System.Drawing.Point(78, 158);
             this.OldPsdTxt.Name = "OldPsdTxt";
+            this.OldPsdTxt.PasswordChar = '*';
             this.OldPsdTxt.Size = new System.Drawing.Size(266, 30);
             this.OldPsdTxt.TabIndex = 4;
             // 
@@ -146,11 +158,84 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Change Password";
             // 
+            // empty
+            // 
+            this.empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.empty.Controls.Add(this.label7);
+            this.empty.Controls.Add(this.button2);
+            this.empty.Location = new System.Drawing.Point(291, 249);
+            this.empty.Name = "empty";
+            this.empty.Size = new System.Drawing.Size(433, 194);
+            this.empty.TabIndex = 19;
+            this.empty.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(115, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(233, 19);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Some Input Boxes are Unfilled";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(164, 113);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(124, 32);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Enter Again";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // AddConfirm
+            // 
+            this.AddConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(81)))));
+            this.AddConfirm.Controls.Add(this.label6);
+            this.AddConfirm.Controls.Add(this.button1);
+            this.AddConfirm.Location = new System.Drawing.Point(0, 123);
+            this.AddConfirm.Name = "AddConfirm";
+            this.AddConfirm.Size = new System.Drawing.Size(433, 194);
+            this.AddConfirm.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(95, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(253, 19);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Password Successfully Changed";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(200)))), ((int)(((byte)(81)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(174, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(91, 32);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Done";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 747);
+            this.Controls.Add(this.empty);
             this.Controls.Add(this.ChangePasswordPanel);
             this.Font = new System.Drawing.Font("Raleway", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -161,6 +246,10 @@
             this.ChangePasswordPanel.ResumeLayout(false);
             this.ChangePasswordPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
+            this.empty.ResumeLayout(false);
+            this.empty.PerformLayout();
+            this.AddConfirm.ResumeLayout(false);
+            this.AddConfirm.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -177,5 +266,11 @@
         private System.Windows.Forms.TextBox OldPsdTxt;
         private System.Windows.Forms.Button ChangePasswordBtn;
         private System.Windows.Forms.PictureBox exit;
+        private System.Windows.Forms.Panel empty;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel AddConfirm;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }

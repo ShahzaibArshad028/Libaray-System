@@ -21,6 +21,7 @@ namespace Project__PHASE_1
         public login()
         {
             InitializeComponent();
+            Wrong.Visible = false;
         }
 
         public login(Color BackGround,Color ForeGround,Color PanelBack,Color PanelFore)
@@ -100,8 +101,10 @@ namespace Project__PHASE_1
                 }
                 else
                 {
-                    MessageBox.Show("Username or Password is Incorrect !!");
+                    Wrong.Visible = true;
+                 
                 }
+
             }
         }
 
@@ -109,6 +112,14 @@ namespace Project__PHASE_1
         { 
 
             Application.Exit();
+        }
+
+        private void tryAgainBtn_Click(object sender, EventArgs e)
+        {
+            Wrong.Visible = false;
+            userText.Text = String.Empty;
+            psdText.Text = String.Empty;
+          
         }
     }
 }

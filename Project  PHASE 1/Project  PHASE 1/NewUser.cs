@@ -17,6 +17,9 @@ namespace Project__PHASE_1
         public NewUser()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(275, 117);
+
         }
 
         public NewUser(Color BackGround, Color ForeGround, Color PanelBack)
@@ -32,7 +35,7 @@ namespace Project__PHASE_1
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
-
+          
         }
 
         private void NewUserBtn_Click(object sender, EventArgs e)

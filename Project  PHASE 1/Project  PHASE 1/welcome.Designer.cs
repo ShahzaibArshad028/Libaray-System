@@ -45,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.leftPanel.SuspendLayout();
             this.BtnPanel.SuspendLayout();
             this.imgPanel.SuspendLayout();
@@ -60,17 +61,18 @@
             this.leftPanel.Controls.Add(this.imgPanel);
             this.leftPanel.Location = new System.Drawing.Point(1, -1);
             this.leftPanel.Name = "leftPanel";
-            this.leftPanel.Size = new System.Drawing.Size(278, 751);
+            this.leftPanel.Size = new System.Drawing.Size(274, 751);
             this.leftPanel.TabIndex = 0;
             // 
             // ExitBtn
             // 
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ExitBtn.FlatAppearance.BorderSize = 0;
+            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitBtn.Location = new System.Drawing.Point(0, 709);
+            this.ExitBtn.Location = new System.Drawing.Point(0, 708);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(291, 42);
+            this.ExitBtn.Size = new System.Drawing.Size(275, 42);
             this.ExitBtn.TabIndex = 7;
             this.ExitBtn.Text = "Exit";
             this.ExitBtn.UseVisualStyleBackColor = true;
@@ -85,19 +87,20 @@
             this.BtnPanel.Controls.Add(this.CngPsdBtn);
             this.BtnPanel.Controls.Add(this.RetBtn);
             this.BtnPanel.Controls.Add(this.RemoveBtn);
-            this.BtnPanel.Location = new System.Drawing.Point(0, 189);
+            this.BtnPanel.Location = new System.Drawing.Point(0, 165);
             this.BtnPanel.Name = "BtnPanel";
-            this.BtnPanel.Size = new System.Drawing.Size(275, 296);
+            this.BtnPanel.Size = new System.Drawing.Size(275, 284);
             this.BtnPanel.TabIndex = 3;
             // 
             // SearchBtn
             // 
             this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SearchBtn.FlatAppearance.BorderSize = 0;
+            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBtn.Location = new System.Drawing.Point(0, 84);
+            this.SearchBtn.Location = new System.Drawing.Point(0, 82);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(278, 42);
+            this.SearchBtn.Size = new System.Drawing.Size(274, 42);
             this.SearchBtn.TabIndex = 7;
             this.SearchBtn.Text = "Search Book";
             this.SearchBtn.UseVisualStyleBackColor = true;
@@ -106,11 +109,12 @@
             // LogoutBtn
             // 
             this.LogoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LogoutBtn.FlatAppearance.BorderSize = 0;
+            this.LogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutBtn.Location = new System.Drawing.Point(0, 252);
+            this.LogoutBtn.Location = new System.Drawing.Point(0, 241);
             this.LogoutBtn.Name = "LogoutBtn";
-            this.LogoutBtn.Size = new System.Drawing.Size(278, 42);
+            this.LogoutBtn.Size = new System.Drawing.Size(274, 42);
             this.LogoutBtn.TabIndex = 6;
             this.LogoutBtn.Text = "Logout";
             this.LogoutBtn.UseVisualStyleBackColor = true;
@@ -119,11 +123,12 @@
             // AddBtn
             // 
             this.AddBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AddBtn.FlatAppearance.BorderSize = 0;
+            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddBtn.Location = new System.Drawing.Point(0, 0);
+            this.AddBtn.Location = new System.Drawing.Point(0, 2);
             this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(278, 42);
+            this.AddBtn.Size = new System.Drawing.Size(274, 42);
             this.AddBtn.TabIndex = 5;
             this.AddBtn.Text = "Add Book";
             this.AddBtn.UseVisualStyleBackColor = true;
@@ -132,11 +137,12 @@
             // addNewUserBtn
             // 
             this.addNewUserBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addNewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addNewUserBtn.FlatAppearance.BorderSize = 0;
+            this.addNewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewUserBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewUserBtn.Location = new System.Drawing.Point(0, 210);
+            this.addNewUserBtn.Location = new System.Drawing.Point(0, 201);
             this.addNewUserBtn.Name = "addNewUserBtn";
-            this.addNewUserBtn.Size = new System.Drawing.Size(278, 42);
+            this.addNewUserBtn.Size = new System.Drawing.Size(274, 42);
             this.addNewUserBtn.TabIndex = 4;
             this.addNewUserBtn.Text = "Add New User";
             this.addNewUserBtn.UseVisualStyleBackColor = true;
@@ -145,11 +151,12 @@
             // CngPsdBtn
             // 
             this.CngPsdBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CngPsdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CngPsdBtn.FlatAppearance.BorderSize = 0;
+            this.CngPsdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CngPsdBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CngPsdBtn.Location = new System.Drawing.Point(0, 168);
+            this.CngPsdBtn.Location = new System.Drawing.Point(0, 162);
             this.CngPsdBtn.Name = "CngPsdBtn";
-            this.CngPsdBtn.Size = new System.Drawing.Size(278, 42);
+            this.CngPsdBtn.Size = new System.Drawing.Size(274, 42);
             this.CngPsdBtn.TabIndex = 3;
             this.CngPsdBtn.Text = "Change Password";
             this.CngPsdBtn.UseVisualStyleBackColor = true;
@@ -159,11 +166,12 @@
             // 
             this.RetBtn.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.RetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RetBtn.FlatAppearance.BorderSize = 0;
+            this.RetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RetBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetBtn.Location = new System.Drawing.Point(0, 126);
+            this.RetBtn.Location = new System.Drawing.Point(0, 122);
             this.RetBtn.Name = "RetBtn";
-            this.RetBtn.Size = new System.Drawing.Size(278, 42);
+            this.RetBtn.Size = new System.Drawing.Size(274, 42);
             this.RetBtn.TabIndex = 2;
             this.RetBtn.Text = "Return Book";
             this.RetBtn.UseVisualStyleBackColor = true;
@@ -172,11 +180,12 @@
             // RemoveBtn
             // 
             this.RemoveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RemoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RemoveBtn.FlatAppearance.BorderSize = 0;
+            this.RemoveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RemoveBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RemoveBtn.Location = new System.Drawing.Point(0, 42);
             this.RemoveBtn.Name = "RemoveBtn";
-            this.RemoveBtn.Size = new System.Drawing.Size(278, 42);
+            this.RemoveBtn.Size = new System.Drawing.Size(274, 42);
             this.RemoveBtn.TabIndex = 1;
             this.RemoveBtn.Text = "Remove Book";
             this.RemoveBtn.UseVisualStyleBackColor = true;
@@ -188,14 +197,14 @@
             this.imgPanel.Font = new System.Drawing.Font("Raleway", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.imgPanel.Location = new System.Drawing.Point(0, 2);
             this.imgPanel.Name = "imgPanel";
-            this.imgPanel.Size = new System.Drawing.Size(275, 151);
+            this.imgPanel.Size = new System.Drawing.Size(275, 166);
             this.imgPanel.TabIndex = 0;
             this.imgPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.imgPanel_Paint);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(47, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(47, 40);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 88);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -209,9 +218,9 @@
             this.rightPanel.Controls.Add(this.label1);
             this.rightPanel.Controls.Add(this.pictureBox2);
             this.rightPanel.Font = new System.Drawing.Font("Raleway", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rightPanel.Location = new System.Drawing.Point(274, 2);
+            this.rightPanel.Location = new System.Drawing.Point(274, 0);
             this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(1008, 747);
+            this.rightPanel.Size = new System.Drawing.Size(1008, 750);
             this.rightPanel.TabIndex = 1;
             // 
             // label2
@@ -244,13 +253,21 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(273, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(2, 784);
+            this.panel1.TabIndex = 3;
+            // 
             // welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 749);
-            this.Controls.Add(this.rightPanel);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.leftPanel);
+            this.Controls.Add(this.rightPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -287,5 +304,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel1;
     }
 }

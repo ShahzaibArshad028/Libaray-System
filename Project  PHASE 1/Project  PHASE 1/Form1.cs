@@ -29,18 +29,17 @@ namespace Project__PHASE_1
             BackColor = Color.FromArgb(240, 240, 240);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void ThemeDark_CheckedChanged(object sender, EventArgs e)
         {
+
             BackColor = Color.FromArgb(28, 28, 33);
             ForeColor = Color.FromArgb(240, 240, 240);
+
         }
         private void themeLight_CheckedChanged(object sender, EventArgs e)
         {
+    
             ForeColor = Color.FromArgb(28, 28, 33);
             BackColor = Color.FromArgb(240, 240, 240);
         }
@@ -57,11 +56,6 @@ namespace Project__PHASE_1
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void StartedButton_Click(object sender, EventArgs e)
         {
             login Form4Loign=new login(this.BackColor, 
@@ -71,24 +65,5 @@ namespace Project__PHASE_1
          
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void logo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

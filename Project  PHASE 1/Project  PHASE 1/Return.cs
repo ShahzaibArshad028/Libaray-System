@@ -21,11 +21,9 @@ namespace Project__PHASE_1
             ReturnPanel.BackColor = PanelBack;
             ReturnPanel.ForeColor = ForeGround;
             ReturnBtn.BackColor = BackGround;
-            //if (this.BackColor == Color.FromArgb(28, 28, 33))
-            //{
-            //    AddBtn.BackColor = Color.FromArgb(50, 50, 66);
-            //    AddBtn.ForeColor = Color.FromArgb(255, 255, 255);
-            //}
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(275, 117);
+
 
         }
         private void label1_Click(object sender, EventArgs e)
@@ -36,7 +34,7 @@ namespace Project__PHASE_1
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
-
+          
         }
 
         private void Return_Load(object sender, EventArgs e)
