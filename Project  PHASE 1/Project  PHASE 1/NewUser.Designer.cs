@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewUser));
             this.NewUserPanel = new System.Windows.Forms.Panel();
+            this.exit = new System.Windows.Forms.PictureBox();
             this.NewUserBtn = new System.Windows.Forms.Button();
             this.CnfPsdtxt = new System.Windows.Forms.TextBox();
-            this.NewPsdTxt = new System.Windows.Forms.TextBox();
-            this.OldPsdTxt = new System.Windows.Forms.TextBox();
+            this.PsdTxt = new System.Windows.Forms.TextBox();
+            this.NewUserTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.exit = new System.Windows.Forms.PictureBox();
             this.NewUserPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // NewUserPanel
@@ -50,8 +50,8 @@
             this.NewUserPanel.Controls.Add(this.exit);
             this.NewUserPanel.Controls.Add(this.NewUserBtn);
             this.NewUserPanel.Controls.Add(this.CnfPsdtxt);
-            this.NewUserPanel.Controls.Add(this.NewPsdTxt);
-            this.NewUserPanel.Controls.Add(this.OldPsdTxt);
+            this.NewUserPanel.Controls.Add(this.PsdTxt);
+            this.NewUserPanel.Controls.Add(this.NewUserTxt);
             this.NewUserPanel.Controls.Add(this.label4);
             this.NewUserPanel.Controls.Add(this.label3);
             this.NewUserPanel.Controls.Add(this.label2);
@@ -60,6 +60,17 @@
             this.NewUserPanel.Name = "NewUserPanel";
             this.NewUserPanel.Size = new System.Drawing.Size(464, 456);
             this.NewUserPanel.TabIndex = 2;
+            // 
+            // exit
+            // 
+            this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
+            this.exit.Location = new System.Drawing.Point(391, 36);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(35, 35);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exit.TabIndex = 4;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // NewUserBtn
             // 
@@ -71,6 +82,7 @@
             this.NewUserBtn.TabIndex = 7;
             this.NewUserBtn.Text = "Registered";
             this.NewUserBtn.UseVisualStyleBackColor = true;
+            this.NewUserBtn.Click += new System.EventHandler(this.NewUserBtn_Click);
             // 
             // CnfPsdtxt
             // 
@@ -80,21 +92,21 @@
             this.CnfPsdtxt.Size = new System.Drawing.Size(266, 30);
             this.CnfPsdtxt.TabIndex = 6;
             // 
-            // NewPsdTxt
+            // PsdTxt
             // 
-            this.NewPsdTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewPsdTxt.Location = new System.Drawing.Point(103, 223);
-            this.NewPsdTxt.Name = "NewPsdTxt";
-            this.NewPsdTxt.Size = new System.Drawing.Size(266, 30);
-            this.NewPsdTxt.TabIndex = 5;
+            this.PsdTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PsdTxt.Location = new System.Drawing.Point(103, 223);
+            this.PsdTxt.Name = "PsdTxt";
+            this.PsdTxt.Size = new System.Drawing.Size(266, 30);
+            this.PsdTxt.TabIndex = 5;
             // 
-            // OldPsdTxt
+            // NewUserTxt
             // 
-            this.OldPsdTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OldPsdTxt.Location = new System.Drawing.Point(103, 151);
-            this.OldPsdTxt.Name = "OldPsdTxt";
-            this.OldPsdTxt.Size = new System.Drawing.Size(266, 30);
-            this.OldPsdTxt.TabIndex = 4;
+            this.NewUserTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewUserTxt.Location = new System.Drawing.Point(103, 151);
+            this.NewUserTxt.Name = "NewUserTxt";
+            this.NewUserTxt.Size = new System.Drawing.Size(266, 30);
+            this.NewUserTxt.TabIndex = 4;
             // 
             // label4
             // 
@@ -146,17 +158,6 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // exit
-            // 
-            this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
-            this.exit.Location = new System.Drawing.Point(391, 36);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(35, 35);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.exit.TabIndex = 4;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
             // NewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,10 +169,11 @@
             this.Name = "NewUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NewUser";
+            this.Load += new System.EventHandler(this.NewUser_Load);
             this.NewUserPanel.ResumeLayout(false);
             this.NewUserPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -181,8 +183,8 @@
         private System.Windows.Forms.Panel NewUserPanel;
         private System.Windows.Forms.Button NewUserBtn;
         private System.Windows.Forms.TextBox CnfPsdtxt;
-        private System.Windows.Forms.TextBox NewPsdTxt;
-        private System.Windows.Forms.TextBox OldPsdTxt;
+        private System.Windows.Forms.TextBox PsdTxt;
+        private System.Windows.Forms.TextBox NewUserTxt;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

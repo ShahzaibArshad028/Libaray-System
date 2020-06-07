@@ -38,9 +38,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SearchBook = new System.Windows.Forms.DataGridView();
             this.SearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchBook)).BeginInit();
             this.SuspendLayout();
             // 
             // SearchPanel
@@ -52,7 +54,7 @@
             this.SearchPanel.Controls.Add(this.label3);
             this.SearchPanel.Controls.Add(this.label2);
             this.SearchPanel.Controls.Add(this.label1);
-            this.SearchPanel.Location = new System.Drawing.Point(267, 137);
+            this.SearchPanel.Location = new System.Drawing.Point(267, 38);
             this.SearchPanel.Name = "SearchPanel";
             this.SearchPanel.Size = new System.Drawing.Size(464, 347);
             this.SearchPanel.TabIndex = 1;
@@ -135,21 +137,39 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // SearchBook
+            // 
+            this.SearchBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.SearchBook.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.SearchBook.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.SearchBook.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchBook.CausesValidation = false;
+            this.SearchBook.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.SearchBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SearchBook.GridColor = System.Drawing.Color.Black;
+            this.SearchBook.Location = new System.Drawing.Point(293, 465);
+            this.SearchBook.Name = "SearchBook";
+            this.SearchBook.Size = new System.Drawing.Size(412, 175);
+            this.SearchBook.TabIndex = 3;
+            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 747);
+            this.Controls.Add(this.SearchBook);
             this.Controls.Add(this.SearchPanel);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Search";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Search";
+            this.Load += new System.EventHandler(this.Search_Load);
             this.SearchPanel.ResumeLayout(false);
             this.SearchPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchBook)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,5 +185,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox exit;
+        private System.Windows.Forms.DataGridView SearchBook;
     }
 }

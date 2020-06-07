@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Return));
             this.ReturnPanel = new System.Windows.Forms.Panel();
+            this.exit = new System.Windows.Forms.PictureBox();
             this.ReturnBtn = new System.Windows.Forms.Button();
             this.CnfPsdtxt = new System.Windows.Forms.TextBox();
             this.NewPsdTxt = new System.Windows.Forms.TextBox();
@@ -39,10 +40,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.exit = new System.Windows.Forms.PictureBox();
             this.ReturnPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ReturnPanel
@@ -60,6 +60,17 @@
             this.ReturnPanel.Name = "ReturnPanel";
             this.ReturnPanel.Size = new System.Drawing.Size(464, 456);
             this.ReturnPanel.TabIndex = 1;
+            // 
+            // exit
+            // 
+            this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
+            this.exit.Location = new System.Drawing.Point(397, 49);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(35, 35);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exit.TabIndex = 3;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
             // ReturnBtn
             // 
@@ -147,17 +158,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // exit
-            // 
-            this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
-            this.exit.Location = new System.Drawing.Point(397, 49);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(35, 35);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.exit.TabIndex = 3;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
             // Return
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,10 +169,11 @@
             this.Name = "Return";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Return";
+            this.Load += new System.EventHandler(this.Return_Load);
             this.ReturnPanel.ResumeLayout(false);
             this.ReturnPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

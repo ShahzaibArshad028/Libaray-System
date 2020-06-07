@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Project__PHASE_1
 {
     public partial class login : Form
     {
+        string connectionString = @"Data Source=DESKTOP-K9UJB8G;Initial Catalog=PorjectDataBase;Integrated Security=True";
+
         SqlConnection connection;
+
         public login()
         {
-            
             InitializeComponent();
-      
-            connection = new SqlConnection(@"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C: \\Users\\shahz\\OneDrive\\Documents\\GitHub\\Libaray - System\\Project  PHASE 1\\DB\libraryDB.mdf;Integrated Security=True;Connect Timeout=30");
-
         }
 
         public login(Color BackGround,Color ForeGround,Color PanelBack,Color PanelFore)
@@ -78,13 +78,31 @@ namespace Project__PHASE_1
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            string query = "Select From login Where username='"+userText.Text.Trim()+"and psd ='"+psdText.Text.Trim()+"'";
+            {
+                connection = new SqlConnection(connectionString);
+              //  connection.Open();
+                string query = "Select * From Login Where userName='" + userText.Text.Trim() + "' and psd ='" + psdText.Text.Trim() +"'";
+                SqlCommand loginCommand = new SqlCommand(query, connection);
+                SqlDataAdapter data = new SqlDataAdapter(loginCommand);
+                DataTable table = new DataTable();
+                data.Fill(table);
+                loginCommand.Connection.Open();
+                loginCommand.ExecuteNonQuery();
+                loginCommand.Connection.Close();
 
-            welcome WelForm= new welcome(this.BackColor,
-                this.ForeColor, loginPanel.BackColor, loginPanel.ForeColor);
-            this.Hide();
-            WelForm.Show();
+                if (table.Rows.Count>=1)
+                {
+                    welcome WelForm = new welcome(userText.Text,this.BackColor,
+                    this.ForeColor, loginPanel.BackColor, loginPanel.ForeColor);
+                    this.Hide();
+                    WelForm.Show();
 
+                }
+                else
+                {
+                    MessageBox.Show("Username or Password is Incorrect !!");
+                }
+            }
         }
 
         private void ExitBtn_Click(object sender, EventArgs e)

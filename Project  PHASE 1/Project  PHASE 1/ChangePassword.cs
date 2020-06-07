@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project__PHASE_1
 {
     public partial class ChangePassword : Form
     {
- 
-        public ChangePassword(Color BackGround, Color ForeGround, Color PanelBack)
+        string connectionString = @"Data Source=DESKTOP-K9UJB8G;Initial Catalog=PorjectDataBase;Integrated Security=True";
+
+        string currentLogin;
+        public ChangePassword(string currentLOGIN,Color BackGround, Color ForeGround, Color PanelBack)
         {
             InitializeComponent();
             this.BackColor = BackGround;
@@ -21,17 +24,52 @@ namespace Project__PHASE_1
             ChangePasswordPanel.BackColor = PanelBack;
             ChangePasswordPanel.ForeColor = ForeGround;
             ChangePasswordBtn.BackColor = BackGround;
-            //if (this.BackColor == Color.FromArgb(28, 28, 33))
-            //{
-            //    AddBtn.BackColor = Color.FromArgb(50, 50, 66);
-            //    AddBtn.ForeColor = Color.FromArgb(255, 255, 255);
-            //}
-
+            currentLogin = currentLOGIN;
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ChangePassword_Load(object sender, EventArgs e)
+        {
+            if (this.ForeColor == Color.FromArgb(240, 240, 240))  //light mode
+            {
+                exit.Image = Image.FromFile("C:\\Users\\shahz\\OneDrive\\Documents\\GitHub\\Libaray-System\\Project Pictures\\icons\\exit_White.png");
+            }
+            else
+            {
+                exit.Image = Image.FromFile("C:\\Users\\shahz\\OneDrive\\Documents\\GitHub\\Libaray-System\\Project Pictures\\icons\\exit_Black.png");
+            }
+        }
+
+        private void ChangePasswordBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+      
+
+            if (connection.State == System.Data.ConnectionState.Open)
+            {
+                SqlCommand sql = new SqlCommand("Update Login Set psd=@psd Where userName='"+currentLogin+ "'and psd=@psdOld", connection);
+                sql.Parameters.Add("@psd", this.NewPsdTxt.Text);
+                sql.Parameters.Add("@psdOld", this.OldPsdTxt.Text);
+
+                if (NewPsdTxt.Text != CnfPsdtxt.Text)
+                {
+                    MessageBox.Show("New Password and Confirm Password are Not Same");
+                }
+                else
+                 sql.ExecuteNonQuery();
+
+            }
+            else
+            {
+                MessageBox.Show("connection failed");
+
+            }
+            connection.Close();
         }
     }
 }

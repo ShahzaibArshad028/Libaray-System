@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace Project__PHASE_1
 {
     public partial class Add : Form
     {
-  
+        string connectionString = @"Data Source=DESKTOP-K9UJB8G;Initial Catalog=PorjectDataBase;Integrated Security=True";
 
         public Add(Color BackGround, Color ForeGround, Color PanelBack)
         {
@@ -72,13 +72,43 @@ namespace Project__PHASE_1
 
         private void Add_Load(object sender, EventArgs e)
         {
-
+            if (this.ForeColor == Color.FromArgb(240, 240, 240))  //light mode
+            {
+                exit.Image = Image.FromFile("C:\\Users\\shahz\\OneDrive\\Documents\\GitHub\\Libaray-System\\Project Pictures\\icons\\exit_White.png");
+            }
+            else
+            {
+                exit.Image = Image.FromFile("C:\\Users\\shahz\\OneDrive\\Documents\\GitHub\\Libaray-System\\Project Pictures\\icons\\exit_Black.png");
+            }
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
 
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            if (connection.State == System.Data.ConnectionState.Open)
+            {
+                SqlCommand sql = new SqlCommand("Insert into BookInfo Values (@BookName,@AuthorName ,@Category,@Quantity)", connection);
+                sql.Parameters.Add("@BookName", this.bookTitleTxt.Text);
+                sql.Parameters.Add("@AuthorName", this.AuthorNametxt.Text);
+                sql.Parameters.Add("@Category", this.CategoryTxt.Text);
+                //slider number add kar la bhai !!
+                sql.Parameters.Add("@Quantity", this.QuantityTxt.Text);
+                sql.ExecuteNonQuery();
+           
+            }
+            else
+            {
+                MessageBox.Show("connection failed");
+
+            }
+            connection.Close();
         }
     }
 }

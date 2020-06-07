@@ -12,14 +12,17 @@ namespace Project__PHASE_1
 {
     public partial class welcome : Form
     {
+        string current;
         public welcome()
         {
             InitializeComponent();
         }
 
-        public welcome(Color BackGround, Color ForeGround, Color PanelBack, Color PanelFore)
+        public welcome(string login,Color BackGround, Color ForeGround, Color PanelBack, Color PanelFore)
         {
             InitializeComponent();
+            current = login;
+
             this.BackColor = BackGround;
             this.ForeColor = ForeGround;
           
@@ -107,7 +110,7 @@ namespace Project__PHASE_1
 
         private void CngPsdBtn_Click(object sender, EventArgs e)
         {
-            ChangePassword changePasswordForm = new ChangePassword(rightPanel.BackColor, rightPanel.ForeColor, leftPanel.BackColor);
+            ChangePassword changePasswordForm = new ChangePassword(current, rightPanel.BackColor, rightPanel.ForeColor, leftPanel.BackColor);
             changePasswordForm.ShowDialog();
         }
 

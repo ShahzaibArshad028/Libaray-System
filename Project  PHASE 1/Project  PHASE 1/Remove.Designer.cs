@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Remove));
             this.RemovePanel = new System.Windows.Forms.Panel();
+            this.exit = new System.Windows.Forms.PictureBox();
             this.QuantityAvaTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.RemoveBtn = new System.Windows.Forms.Button();
@@ -43,10 +44,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.exit = new System.Windows.Forms.PictureBox();
             this.RemovePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // RemovePanel
@@ -71,11 +71,23 @@
             this.RemovePanel.TabIndex = 1;
             this.RemovePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.AddPanel_Paint);
             // 
+            // exit
+            // 
+            this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
+            this.exit.Location = new System.Drawing.Point(369, 24);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(35, 35);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exit.TabIndex = 3;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // QuantityAvaTxt
             // 
             this.QuantityAvaTxt.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuantityAvaTxt.Location = new System.Drawing.Point(82, 313);
             this.QuantityAvaTxt.Name = "QuantityAvaTxt";
+            this.QuantityAvaTxt.ReadOnly = true;
             this.QuantityAvaTxt.Size = new System.Drawing.Size(266, 30);
             this.QuantityAvaTxt.TabIndex = 17;
             // 
@@ -98,6 +110,7 @@
             this.RemoveBtn.TabIndex = 15;
             this.RemoveBtn.Text = "Remove";
             this.RemoveBtn.UseVisualStyleBackColor = true;
+            this.RemoveBtn.Click += new System.EventHandler(this.RemoveBtn_Click);
             // 
             // QuantityToRemoveTxt
             // 
@@ -141,6 +154,7 @@
             this.bookTitleTxt.Name = "bookTitleTxt";
             this.bookTitleTxt.Size = new System.Drawing.Size(266, 30);
             this.bookTitleTxt.TabIndex = 10;
+            this.bookTitleTxt.TextChanged += new System.EventHandler(this.bookTitleTxt_TextChanged);
             // 
             // label4
             // 
@@ -192,17 +206,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // exit
-            // 
-            this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
-            this.exit.Location = new System.Drawing.Point(369, 24);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(35, 35);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.exit.TabIndex = 3;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
             // Remove
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,10 +217,11 @@
             this.Name = "Remove";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Remove";
+            this.Load += new System.EventHandler(this.Remove_Load);
             this.RemovePanel.ResumeLayout(false);
             this.RemovePanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

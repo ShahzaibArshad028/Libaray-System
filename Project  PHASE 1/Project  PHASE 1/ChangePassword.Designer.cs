@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePassword));
             this.ChangePasswordPanel = new System.Windows.Forms.Panel();
+            this.exit = new System.Windows.Forms.PictureBox();
             this.ChangePasswordBtn = new System.Windows.Forms.Button();
             this.CnfPsdtxt = new System.Windows.Forms.TextBox();
             this.NewPsdTxt = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.exit = new System.Windows.Forms.PictureBox();
             this.ChangePasswordPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,17 @@
             this.ChangePasswordPanel.Size = new System.Drawing.Size(433, 456);
             this.ChangePasswordPanel.TabIndex = 0;
             // 
+            // exit
+            // 
+            this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
+            this.exit.Location = new System.Drawing.Point(376, 36);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(35, 35);
+            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.exit.TabIndex = 1;
+            this.exit.TabStop = false;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // ChangePasswordBtn
             // 
             this.ChangePasswordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -69,6 +80,7 @@
             this.ChangePasswordBtn.TabIndex = 7;
             this.ChangePasswordBtn.Text = "Confirm";
             this.ChangePasswordBtn.UseVisualStyleBackColor = true;
+            this.ChangePasswordBtn.Click += new System.EventHandler(this.ChangePasswordBtn_Click);
             // 
             // CnfPsdtxt
             // 
@@ -134,17 +146,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Change Password";
             // 
-            // exit
-            // 
-            this.exit.Image = ((System.Drawing.Image)(resources.GetObject("exit.Image")));
-            this.exit.Location = new System.Drawing.Point(376, 36);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(35, 35);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.exit.TabIndex = 1;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -154,7 +155,9 @@
             this.Font = new System.Drawing.Font("Raleway", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ChangePassword";
+            this.Load += new System.EventHandler(this.ChangePassword_Load);
             this.ChangePasswordPanel.ResumeLayout(false);
             this.ChangePasswordPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
