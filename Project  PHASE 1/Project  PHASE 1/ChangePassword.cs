@@ -87,5 +87,13 @@ namespace Project__PHASE_1
         {
             empty.Visible = false;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CnfPsdtxt.Visible = false;
+            OldPsdTxt.Text = String.Empty;
+            NewPsdTxt.Text = String.Empty;
+            CnfPsdtxt.Text = String.Empty;
+        }
     }
 }

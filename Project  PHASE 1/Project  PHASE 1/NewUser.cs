@@ -40,8 +40,11 @@ namespace Project__PHASE_1
 
         private void NewUserBtn_Click(object sender, EventArgs e)
         {
-            
-              SqlConnection  connection = new SqlConnection(connectionString);
+            if (NewUserBtn.Text == String.Empty || PsdTxt.Text == String.Empty || CnfPsdtxt.Text == String.Empty)
+            {
+                empty.Visible = true;
+            }
+            SqlConnection  connection = new SqlConnection(connectionString);
          connection.Open();
    
             if (PsdTxt.Text != CnfPsdtxt.Text)
