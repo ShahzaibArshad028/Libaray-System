@@ -28,6 +28,9 @@ namespace Project__PHASE_1
             RemoveBtn.BackColor = BackGround;
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(275, 117);
+            empty.Visible = false;
+            removeConfirm.Visible = false;
+            
         }
 
 
@@ -40,39 +43,45 @@ namespace Project__PHASE_1
 
         private void RemoveBtn_Click(object sender, EventArgs e)
         {
-
-
-         SqlConnection  connection = new SqlConnection(connectionString);
-         connection.Open();
-            if(connection.State == System.Data.ConnectionState.Open)
+            if (bookTitleTxt.Text == String.Empty || QuantityToRemoveTxt.Text == String.Empty)
             {
-
-                SqlCommand removeStateNow = new SqlCommand("Delete From BookInfo Where BookName=@BookName and AuthorName=@AuthorName", connection);
-                removeStateNow.Parameters.Add("@BookName", this.bookTitleTxt.Text);
-                removeStateNow.Parameters.Add("@AuthorName", this.AuthorNametxt.Text);
-
-                if (Quantity <Convert.ToInt32(QuantityToRemoveTxt.Text))
+                empty.Visible = true;
+            }
+            else
+            {
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Open)
                 {
-                    MessageBox.Show("NOT ENOUGH BOOKS ARE AVAILABLE !!");
-                    return;
-                }
-                else if(Quantity > Convert.ToInt32(QuantityToRemoveTxt.Text)){
-                    MessageBox.Show("Jhulla laal");
-                    SqlCommand sql = new SqlCommand("update BookInfo set Quantity=Quantity-@Quantity Where BookName=@BookName and AuthorName=@AuthorName", connection);
-                    sql.Parameters.Add("@BookName", this.bookTitleTxt.Text);
-                    sql.Parameters.Add("@AuthorName", this.AuthorNametxt.Text);
-                    sql.Parameters.Add("@Quantity", Convert.ToInt32(this.QuantityToRemoveTxt.Text));
-                    sql.ExecuteNonQuery();
-                    return;
-                }
-                removeStateNow.ExecuteNonQuery();
-            }
-            else 
-            {
-                MessageBox.Show("connection failed");
 
+                    SqlCommand removeStateNow = new SqlCommand("Delete From BookInfo Where BookName=@BookName and AuthorName=@AuthorName", connection);
+                    removeStateNow.Parameters.Add("@BookName", this.bookTitleTxt.Text);
+                    removeStateNow.Parameters.Add("@AuthorName", this.AuthorNametxt.Text);
+
+                    if (Quantity < Convert.ToInt32(QuantityToRemoveTxt.Text))
+                    {
+                        more.Visible = true;
+                        return;
+                    }
+                    else if (Quantity > Convert.ToInt32(QuantityToRemoveTxt.Text))
+                    {
+                        SqlCommand sql = new SqlCommand("update BookInfo set Quantity=Quantity-@Quantity Where BookName=@BookName and AuthorName=@AuthorName", connection);
+                        sql.Parameters.Add("@BookName", this.bookTitleTxt.Text);
+                        sql.Parameters.Add("@AuthorName", this.AuthorNametxt.Text);
+                        sql.Parameters.Add("@Quantity", Convert.ToInt32(this.QuantityToRemoveTxt.Text));
+                        sql.ExecuteNonQuery();
+                        removeConfirm.Visible = true;
+                        return;
+                    }
+                    removeStateNow.ExecuteNonQuery();
+                }
+                else
+                {
+                    MessageBox.Show("connection failed");
+
+                }
+                connection.Close();
             }
-            connection.Close();
         }
 
         private void Remove_Load(object sender, EventArgs e)
@@ -114,43 +123,64 @@ namespace Project__PHASE_1
 
         private void bookTitleTxt_TextChanged(object sender, EventArgs e)
         {
-         
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
 
-            if (connection.State == System.Data.ConnectionState.Open)
-            {
-                SqlCommand cmd = new SqlCommand("Select * From BookInfo Where BookName='"+bookTitleTxt.Text+"'", connection);
-                SqlDataReader data = cmd.ExecuteReader();
+           
+            
+            
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
 
-                while (data.Read())
+                if (connection.State == System.Data.ConnectionState.Open)
                 {
-                    Author=data.GetString(2);
-                    Category = data.GetString(3);
-                    Quantity = data.GetInt32(4);
+                    SqlCommand cmd = new SqlCommand("Select * From BookInfo Where BookName='" + bookTitleTxt.Text + "'", connection);
+                    SqlDataReader data = cmd.ExecuteReader();
+
+                    while (data.Read())
+                    {
+                        Author = data.GetString(2);
+                        Category = data.GetString(3);
+                        Quantity = data.GetInt32(4);
+
+                    }
+
+                    AuthorNametxt.Text = Author;
+                    CategoryTxt.Text = Category;
+                    QuantityAvaTxt.Text = Convert.ToString(Quantity);
+                    //User Can not Change now
+                    AuthorNametxt.ReadOnly = true;
+                    CategoryTxt.ReadOnly = true;
+                    QuantityAvaTxt.ReadOnly = true;
+                }
+                else
+                {
+                    MessageBox.Show("connection failed");
 
                 }
-                AuthorNametxt.Text = Author;
-                CategoryTxt.Text = Category;
-                QuantityAvaTxt.Text = Convert.ToString(Quantity);
-                //User Can not Change now
-                AuthorNametxt.ReadOnly = true;
-                CategoryTxt.ReadOnly = true;
-                QuantityAvaTxt.ReadOnly = true;
-
-            }
-            else
-            {
-                MessageBox.Show("connection failed");
-
-            }
-            connection.Close();
+                connection.Close();
+            
         }
 
         private void RemoveSuccess_Click(object sender, EventArgs e)
         {
-            this.Refresh();
-            RemoveSuccess.Visible = false;
+           
+            removeConfirm.Visible = false;
+            bookTitleTxt.Text = String.Empty;
+            AuthorNametxt.Text = String.Empty;
+            CategoryTxt.Text = String.Empty;
+            QuantityAvaTxt.Text = String.Empty;
+            QuantityToRemoveTxt.Text = String.Empty;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            empty.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            more.Visible = false;
+            QuantityToRemoveTxt.Text = String.Empty;
         }
     }
 }

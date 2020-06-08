@@ -57,7 +57,6 @@
             // 
             // AddPanel
             // 
-            this.AddPanel.Controls.Add(this.empty);
             this.AddPanel.Controls.Add(this.AddConfirm);
             this.AddPanel.Controls.Add(this.exit);
             this.AddPanel.Controls.Add(this.AddBtn);
@@ -91,7 +90,7 @@
             this.empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.empty.Controls.Add(this.label7);
             this.empty.Controls.Add(this.button2);
-            this.empty.Location = new System.Drawing.Point(0, 130);
+            this.empty.Location = new System.Drawing.Point(292, 232);
             this.empty.Name = "empty";
             this.empty.Size = new System.Drawing.Size(433, 194);
             this.empty.TabIndex = 18;
@@ -270,6 +269,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 747);
+            this.Controls.Add(this.empty);
             this.Controls.Add(this.AddPanel);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

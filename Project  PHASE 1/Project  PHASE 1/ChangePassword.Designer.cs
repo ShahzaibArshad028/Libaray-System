@@ -163,7 +163,7 @@
             this.empty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.empty.Controls.Add(this.label7);
             this.empty.Controls.Add(this.button2);
-            this.empty.Location = new System.Drawing.Point(288, 435);
+            this.empty.Location = new System.Drawing.Point(291, 249);
             this.empty.Name = "empty";
             this.empty.Size = new System.Drawing.Size(433, 194);
             this.empty.TabIndex = 19;
