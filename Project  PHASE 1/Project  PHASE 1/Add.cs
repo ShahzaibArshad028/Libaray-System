@@ -31,9 +31,10 @@ namespace Project__PHASE_1
 
         private void Add_Load(object sender, EventArgs e)
         {
-            if (this.ForeColor == Color.FromArgb(240, 240, 240))  //light mode
+            if (this.ForeColor == Color.FromArgb(255, 240, 240, 240))  //light mode
             {
                 exit.Image = Image.FromFile("C:\\Users\\shahz\\OneDrive\\Documents\\GitHub\\Libaray-System\\Project Pictures\\icons\\exit_White.png");
+        
             }
             else
             {
