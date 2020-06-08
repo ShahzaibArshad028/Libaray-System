@@ -37,7 +37,6 @@
             this.AddBtn = new System.Windows.Forms.Button();
             this.addNewUserBtn = new System.Windows.Forms.Button();
             this.CngPsdBtn = new System.Windows.Forms.Button();
-            this.RetBtn = new System.Windows.Forms.Button();
             this.RemoveBtn = new System.Windows.Forms.Button();
             this.imgPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -85,11 +84,10 @@
             this.BtnPanel.Controls.Add(this.AddBtn);
             this.BtnPanel.Controls.Add(this.addNewUserBtn);
             this.BtnPanel.Controls.Add(this.CngPsdBtn);
-            this.BtnPanel.Controls.Add(this.RetBtn);
             this.BtnPanel.Controls.Add(this.RemoveBtn);
             this.BtnPanel.Location = new System.Drawing.Point(0, 165);
             this.BtnPanel.Name = "BtnPanel";
-            this.BtnPanel.Size = new System.Drawing.Size(275, 284);
+            this.BtnPanel.Size = new System.Drawing.Size(275, 245);
             this.BtnPanel.TabIndex = 3;
             // 
             // SearchBtn
@@ -112,7 +110,7 @@
             this.LogoutBtn.FlatAppearance.BorderSize = 0;
             this.LogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogoutBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LogoutBtn.Location = new System.Drawing.Point(0, 241);
+            this.LogoutBtn.Location = new System.Drawing.Point(0, 200);
             this.LogoutBtn.Name = "LogoutBtn";
             this.LogoutBtn.Size = new System.Drawing.Size(274, 42);
             this.LogoutBtn.TabIndex = 6;
@@ -140,7 +138,7 @@
             this.addNewUserBtn.FlatAppearance.BorderSize = 0;
             this.addNewUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewUserBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewUserBtn.Location = new System.Drawing.Point(0, 201);
+            this.addNewUserBtn.Location = new System.Drawing.Point(0, 162);
             this.addNewUserBtn.Name = "addNewUserBtn";
             this.addNewUserBtn.Size = new System.Drawing.Size(274, 42);
             this.addNewUserBtn.TabIndex = 4;
@@ -154,28 +152,13 @@
             this.CngPsdBtn.FlatAppearance.BorderSize = 0;
             this.CngPsdBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CngPsdBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CngPsdBtn.Location = new System.Drawing.Point(0, 162);
+            this.CngPsdBtn.Location = new System.Drawing.Point(0, 122);
             this.CngPsdBtn.Name = "CngPsdBtn";
             this.CngPsdBtn.Size = new System.Drawing.Size(274, 42);
             this.CngPsdBtn.TabIndex = 3;
             this.CngPsdBtn.Text = "Change Password";
             this.CngPsdBtn.UseVisualStyleBackColor = true;
             this.CngPsdBtn.Click += new System.EventHandler(this.CngPsdBtn_Click);
-            // 
-            // RetBtn
-            // 
-            this.RetBtn.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.RetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RetBtn.FlatAppearance.BorderSize = 0;
-            this.RetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RetBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RetBtn.Location = new System.Drawing.Point(0, 122);
-            this.RetBtn.Name = "RetBtn";
-            this.RetBtn.Size = new System.Drawing.Size(274, 42);
-            this.RetBtn.TabIndex = 2;
-            this.RetBtn.Text = "Return Book";
-            this.RetBtn.UseVisualStyleBackColor = true;
-            this.RetBtn.Click += new System.EventHandler(this.RetBtn_Click);
             // 
             // RemoveBtn
             // 
@@ -295,7 +278,6 @@
         private System.Windows.Forms.Panel BtnPanel;
         private System.Windows.Forms.Button addNewUserBtn;
         private System.Windows.Forms.Button CngPsdBtn;
-        private System.Windows.Forms.Button RetBtn;
         private System.Windows.Forms.Button RemoveBtn;
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.Button ExitBtn;
